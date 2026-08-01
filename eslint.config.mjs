@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Артефакт снапшота для GitHub Pages (tools/snapshot.mjs) — не вихідний код
+    "_site/**",
     // Підпроєкт Medusa має власний ESLint (turbo lint усередині medusa/)
     "medusa/**",
   ]),

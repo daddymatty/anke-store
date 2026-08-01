@@ -5,19 +5,66 @@ import { Reveal } from "@/components/motion/Reveal";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { LogoMark } from "@/components/ui/Logo";
 import { FOUNDER } from "@/content/founder";
 import { breadcrumbsJsonLd } from "@/lib/seo/jsonld";
 import { pageAlternates } from "@/lib/seo/meta";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `${FOUNDER.name} — засновниця ANKE`,
-  description: `${FOUNDER.role}: як з'явився бренд, за якими правилами обираються тканини і чому кожна модель спершу перевіряється на собі.`,
+  title: `${FOUNDER.fullName} — засновниця ANKE`,
+  description: `${FOUNDER.fullName} — засновниця українського бренду ANKE: як з'явився бренд, за якими правилами обираються тканини і чому кожна модель спершу перевіряється на собі.`,
   alternates: pageAlternates("/zasnovnytsia"),
-  openGraph: { images: [{ url: FOUNDER.portrait.src }] },
+  ...(FOUNDER.ogImage
+    ? { openGraph: { images: [{ url: FOUNDER.ogImage, width: 1200, height: 630 }] } }
+    : {}),
 };
 
 const crumbs = [{ title: "Засновниця", href: "/zasnovnytsia" }];
+
+type Shot = { src: string; alt: string; placeholder: boolean; caption: string };
+
+/**
+ * Фото засновниці. Поки реального кадру немає (placeholder: true) — показуємо
+ * стриману рамку з монограмою замість чужого зображення, щоб сторінка не
+ * видавала тонову заглушку за портрет.
+ */
+function FounderPhoto({
+  shot,
+  sizes,
+  priority,
+  className,
+}: {
+  shot: Shot;
+  sizes: string;
+  priority?: boolean;
+  className: string;
+}) {
+  if (shot.placeholder) {
+    return (
+      <div className={`${className} bg-beige p-3`}>
+        <div className="flex h-full w-full flex-col items-center justify-center gap-5 border border-dashed border-ink/15">
+          <LogoMark className="h-12 w-12 text-ink/20" />
+          <p className="px-6 text-center text-[11px] uppercase tracking-[0.22em] text-muted">
+            {shot.caption}
+          </p>
+        </div>
+      </div>
+    );
+  }
+  return (
+    <div className={`${className} relative overflow-hidden bg-beige`}>
+      <Image
+        src={shot.src}
+        alt={shot.alt}
+        fill
+        priority={priority}
+        sizes={sizes}
+        className="object-cover"
+      />
+    </div>
+  );
+}
 
 export default function FounderPage() {
   return (
@@ -27,10 +74,14 @@ export default function FounderPage() {
           {
             "@context": "https://schema.org",
             "@type": "Person",
-            name: FOUNDER.name,
+            name: FOUNDER.fullName,
+            givenName: "Анастасія",
+            familyName: "Січко",
             jobTitle: FOUNDER.role,
             worksFor: { "@id": `${SITE.url}/#organization` },
-            image: `${SITE.url}${FOUNDER.portrait.src}`,
+            ...(FOUNDER.portrait.placeholder
+              ? {}
+              : { image: `${SITE.url}${FOUNDER.portrait.src}` }),
             url: `${SITE.url}/zasnovnytsia`,
           },
           breadcrumbsJsonLd(crumbs),
@@ -43,23 +94,19 @@ export default function FounderPage() {
 
       {/* Знайомство: портрет і хто це */}
       <Container className="mt-8 grid items-center gap-8 md:mt-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-16">
-        <div className="relative aspect-[4/5] max-h-[68vh] w-full overflow-hidden bg-beige">
-          <Image
-            src={FOUNDER.portrait.src}
-            alt={FOUNDER.portrait.alt}
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            className="object-cover"
-          />
-        </div>
+        <FounderPhoto
+          shot={FOUNDER.portrait}
+          priority
+          sizes="(max-width: 1024px) 100vw, 40vw"
+          className="aspect-[4/5] max-h-[68vh] w-full"
+        />
 
         <div>
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-rose-deep">
             {FOUNDER.role}
           </p>
-          <h1 className="mt-4 font-display text-display font-light leading-[0.95] tracking-[0.06em] md:text-display-lg">
-            {FOUNDER.name}
+          <h1 className="mt-4 font-display text-display-sm font-light leading-[1.05] tracking-[0.06em] md:text-display">
+            {FOUNDER.fullName}
           </h1>
           <p className="mt-6 max-w-md text-[15px] leading-relaxed text-muted">{FOUNDER.lead}</p>
         </div>
@@ -80,15 +127,11 @@ export default function FounderPage() {
       <Container className="mt-16 md:mt-24">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] lg:gap-16">
           <Reveal>
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-beige lg:aspect-[5/4]">
-              <Image
-                src={FOUNDER.atelier.src}
-                alt={FOUNDER.atelier.alt}
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+            <FounderPhoto
+              shot={FOUNDER.atelier}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="aspect-[4/3] w-full lg:aspect-[5/4]"
+            />
           </Reveal>
 
           <Reveal delay={0.05}>
@@ -142,7 +185,7 @@ export default function FounderPage() {
             «{FOUNDER.quote}»
           </p>
           <footer className="mt-6 text-[12px] uppercase tracking-[0.2em] text-muted">
-            {FOUNDER.name}, {FOUNDER.role.toLowerCase()}
+            {FOUNDER.fullName} — {FOUNDER.role}
           </footer>
         </blockquote>
       </Container>
