@@ -46,3 +46,7 @@ next-env.d.ts
 
 # Знімок для GitHub Pages
 _site/
+
+# Артефакти Playwright
+test-results/
+playwright-report/
