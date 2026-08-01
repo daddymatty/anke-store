@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { getCartLines, setCartQty } from "@/app/actions/cart";
 import { IconClose } from "@/components/ui/icons";
 import { backdropFade, drawerPanel } from "@/lib/motion";
+import { pushEcommerce } from "@/lib/analytics";
 import { formatPrice } from "@/lib/money";
 import {
   getCartServerSnapshot,
@@ -67,7 +68,19 @@ export function CartDrawer({
         body: JSON.stringify({ lines }),
       });
       const data = (await res.json()) as { items: DrawerItem[] };
-      if (!cancelled) setItems(data.items);
+      if (!cancelled) {
+        setItems(data.items);
+        pushEcommerce("view_cart", {
+          value: data.items.reduce((a, i) => a + (i.price * i.qty) / 100, 0),
+          items: data.items.map((i) => ({
+            item_id: i.slug,
+            item_name: i.title,
+            item_variant: i.size,
+            price: Math.round(i.price) / 100,
+            quantity: i.qty,
+          })),
+        });
+      }
     })();
     return () => {
       cancelled = true;
@@ -79,9 +92,16 @@ export function CartDrawer({
   const left = Math.max(0, freeShippingFrom - subtotal);
 
   const changeQty = (slug: string, size: string, qty: number) => {
+    const prev = items?.find((i) => i.slug === slug && i.size === size)?.qty ?? 0;
     startTransition(async () => {
       await setCartQty(slug, size, qty);
       notifyCartChanged();
+      const delta = qty - prev;
+      if (delta !== 0) {
+        pushEcommerce(delta > 0 ? "add_to_cart" : "remove_from_cart", {
+          items: [{ item_id: slug, item_variant: size, quantity: Math.abs(delta) }],
+        });
+      }
     });
   };
 

@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { requestLoginCode, verifyLoginCode } from "@/app/actions/auth";
+import { pushEvent } from "@/lib/analytics";
 
 /** Вхід без пароля: email → одноразовий код з листа. */
 export function LoginForm() {
@@ -32,7 +33,10 @@ export function LoginForm() {
     setError(null);
     const res = await verifyLoginCode(email, code);
     setBusy(false);
-    if (res.ok) router.refresh();
+    if (res.ok) {
+      pushEvent("sign_up", { method: "email_otp" });
+      router.refresh();
+    }
     else setError(res.error ?? "Щось пішло не так");
   };
 

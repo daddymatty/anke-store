@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { applyPromo, placeOrder, type CheckoutInput } from "@/app/actions/checkout";
+import { pushEcommerce } from "@/lib/analytics";
 import { notifyCartChanged } from "@/lib/cart-client";
 import { formatPrice } from "@/lib/money";
 
@@ -62,6 +63,28 @@ export function CheckoutForm({ items, subtotal, freeShippingFrom }: SummaryProps
   const [promoError, setPromoError] = useState<string | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const cityBoxRef = useRef<HTMLDivElement>(null);
+  const shippingSent = useRef(false);
+  const paymentSent = useRef(false);
+
+  const gaItems = items.map((i) => ({
+    item_id: i.slug,
+    item_name: i.title,
+    item_variant: i.size,
+    price: Math.round(i.price) / 100,
+    quantity: i.qty,
+  }));
+
+  const trackShipping = (tier: string) => {
+    if (shippingSent.current) return;
+    shippingSent.current = true;
+    pushEcommerce("add_shipping_info", { shipping_tier: tier, value: subtotal / 100, items: gaItems });
+  };
+
+  const trackPayment = (type: string) => {
+    if (paymentSent.current) return;
+    paymentSent.current = true;
+    pushEcommerce("add_payment_info", { payment_type: type, value: subtotal / 100, items: gaItems });
+  };
 
   const {
     register,
@@ -141,6 +164,8 @@ export function CheckoutForm({ items, subtotal, freeShippingFrom }: SummaryProps
       warehouseRef,
       promoCode: promo?.code,
     };
+    trackShipping(data.deliveryMethod);
+    trackPayment(data.paymentMethod);
     const res = await placeOrder(payload);
     if (res.ok) {
       notifyCartChanged();
@@ -260,6 +285,7 @@ export function CheckoutForm({ items, subtotal, freeShippingFrom }: SummaryProps
                   onChange={(e) => {
                     setValue("warehouseName", e.target.value);
                     setWarehouseRef(warehouses.find((w) => w.description === e.target.value)?.ref);
+                    if (e.target.value) trackShipping(deliveryMethod);
                   }}
                   disabled={!cityRef}
                   className={`${inputClass} bg-paper disabled:opacity-50`}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getCartLines } from "@/app/actions/cart";
+import { BeginCheckoutTracker } from "@/components/analytics/trackers";
 import { CheckoutForm } from "@/components/shop/CheckoutForm";
 import { Container } from "@/components/ui/Container";
 import { resolveCart } from "@/lib/cart/summary";
@@ -32,6 +33,17 @@ export default async function CheckoutPage() {
 
   return (
     <Container className="py-8 md:py-12">
+      <BeginCheckoutTracker
+        value={Math.round(cart.subtotal) / 100}
+        items={cart.items.map((i) => ({
+          item_id: i.sku,
+          item_name: i.title,
+          item_brand: "ANKE",
+          item_variant: i.size,
+          price: Math.round(i.price) / 100,
+          quantity: i.qty,
+        }))}
+      />
       <h1 className="font-display text-display-sm font-light md:text-display">Оформлення замовлення</h1>
       <p className="mt-2 text-[13px] text-muted">
         Без реєстрації. Поля з * — обов&apos;язкові.

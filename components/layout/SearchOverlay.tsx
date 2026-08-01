@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { IconClose, IconSearch } from "@/components/ui/icons";
 import { menuReveal, backdropFade } from "@/lib/motion";
+import { pushEvent } from "@/lib/analytics";
 import { formatPrice } from "@/lib/money";
 
 type Suggestion = {
@@ -71,6 +72,7 @@ export function SearchOverlay({ open, onClose }: { open: boolean; onClose: () =>
   const submit = () => {
     if (q.trim().length < 2) return;
     const query = q.trim();
+    pushEvent("search", { search_term: query });
     close();
     router.push(`/poshuk?q=${encodeURIComponent(query)}`);
   };

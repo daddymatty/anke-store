@@ -4,6 +4,7 @@ import type { CatalogFilters, CategoryNode } from "@/lib/catalog/types";
 import { PER_PAGE, parseCatalogParams, type CatalogSearchParams } from "@/lib/catalog/url";
 import { Container } from "@/components/ui/Container";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { ViewItemListTracker } from "@/components/analytics/trackers";
 import { breadcrumbsJsonLd, itemListJsonLd } from "@/lib/seo/jsonld";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { FiltersPanel } from "./FiltersPanel";
@@ -55,6 +56,7 @@ export async function CatalogView({
     <Container className="py-6 md:py-10">
       <JsonLd data={breadcrumbsJsonLd(breadcrumbs)} />
       {jsonLdCategory && <JsonLd data={itemListJsonLd(jsonLdCategory, result.items)} />}
+      <ViewItemListTracker items={result.items} listName={title} />
       <Breadcrumbs items={breadcrumbs} />
 
       <header className="mt-5">

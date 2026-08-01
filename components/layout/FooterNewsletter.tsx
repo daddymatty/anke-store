@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { subscribeGuest } from "@/app/actions/auth";
+import { pushEvent, pushMicro } from "@/lib/analytics";
 import type { NewsletterSegment } from "@/lib/profiles";
 
 const SEGMENTS: { value: NewsletterSegment; label: string }[] = [
@@ -23,7 +24,11 @@ export function FooterNewsletter() {
   const submit = async () => {
     setError(null);
     const res = await subscribeGuest(email, segments.length ? segments : ["novynky"]);
-    if (res.ok) setState("done");
+    if (res.ok) {
+      setState("done");
+      pushEvent("generate_lead", { lead_type: "newsletter", segments: segments.join(",") });
+      pushMicro("newsletter_subscribe");
+    }
     else {
       setState("error");
       setError(res.error ?? "Спробуйте ще раз");

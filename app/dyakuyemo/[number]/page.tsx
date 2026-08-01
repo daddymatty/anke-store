@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { PurchaseTracker } from "@/components/analytics/trackers";
 import { Container } from "@/components/ui/Container";
+import { sha256 } from "@/lib/integrations/meta-capi";
 import { formatPrice } from "@/lib/money";
 import { getOrder } from "@/lib/orders/store";
 
@@ -34,6 +36,22 @@ export default async function ThankYouPage({
 
   return (
     <Container className="py-14 md:py-20">
+      <PurchaseTracker
+        orderNumber={order.number}
+        value={Math.round(order.totals.total) / 100}
+        shipping={order.totals.shipping ? Math.round(order.totals.shipping) / 100 : 0}
+        coupon={order.promo?.code}
+        items={order.items.map((i) => ({
+          item_id: i.sku,
+          item_name: i.title,
+          item_brand: "ANKE",
+          item_variant: i.size,
+          price: Math.round(i.price) / 100,
+          quantity: i.qty,
+        }))}
+        hashedEmail={sha256(order.customer.email)}
+        hashedPhone={sha256(order.customer.phone.replace(/\D/g, ""))}
+      />
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-rose-deep">Замовлення прийнято</p>
         <h1 className="mt-3 font-display text-display-sm font-light md:text-display">

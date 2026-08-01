@@ -10,6 +10,7 @@ import { RecentlyViewed } from "@/components/shop/RecentlyViewed";
 import { ReviewsSection, Stars } from "@/components/shop/ReviewsSection";
 import { VariantPicker } from "@/components/shop/VariantPicker";
 import { ViewedTracker } from "@/components/shop/ViewedTracker";
+import { ViewItemTracker } from "@/components/analytics/trackers";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { catalog } from "@/lib/catalog";
 import { discountPercent, formatPrice, priceDecimal } from "@/lib/money";
@@ -65,6 +66,17 @@ export default async function ProductPage({ params }: Props) {
   return (
     <Container className="py-6 pb-24 md:py-10 lg:pb-10">
       <JsonLd data={[productJsonLd(product), breadcrumbsJsonLd(crumbs)]} />
+      <ViewItemTracker
+        item={{
+          item_id: product.sku,
+          item_name: product.title,
+          item_brand: product.brand,
+          item_variant: product.color.name,
+          price: Math.round(product.price) / 100,
+          quantity: 1,
+        }}
+        value={Math.round(product.price) / 100}
+      />
       <ViewedTracker
         item={{
           slug: product.slug,

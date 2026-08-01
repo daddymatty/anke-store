@@ -7,7 +7,9 @@ import { resolveCart } from "@/lib/cart/summary";
 import { createInvoice } from "@/lib/integrations/mono";
 import { sendOrderConfirmation } from "@/lib/integrations/email";
 import { sendTelegram } from "@/lib/integrations/telegram";
+import { sendMetaPurchase } from "@/lib/integrations/meta-capi";
 import { mirrorOrderToMedusa } from "@/lib/orders/medusa-mirror";
+import { ATTRIBUTION_COOKIE } from "@/lib/cookie-names";
 import { buildOrder, saveOrder, updateOrder } from "@/lib/orders/store";
 import { formatPrice } from "@/lib/money";
 import { validatePromo } from "@/lib/promo";
@@ -65,6 +67,16 @@ export async function placeOrder(input: CheckoutInput): Promise<PlaceOrderResult
     return { ok: false, error: `«${unavailable.title}» (${unavailable.size}) вже розкупили — приберіть з кошика` };
   }
 
+  // Атрибуція UTM/click id з cookie (90 днів, middleware)
+  const cookieStore = await cookies();
+  let attribution: Record<string, string> | undefined;
+  try {
+    const raw = cookieStore.get(ATTRIBUTION_COOKIE)?.value;
+    if (raw) attribution = JSON.parse(raw) as Record<string, string>;
+  } catch {
+    attribution = undefined;
+  }
+
   const order = buildOrder(
     {
       customer: { name: data.name, phone: data.phone, email: data.email },
@@ -79,6 +91,7 @@ export async function placeOrder(input: CheckoutInput): Promise<PlaceOrderResult
       paymentMethod: data.paymentMethod,
       comment: data.comment,
       promoCode: data.promoCode,
+      attribution,
     },
     cart,
   );
@@ -98,6 +111,8 @@ export async function placeOrder(input: CheckoutInput): Promise<PlaceOrderResult
       `${order.delivery.cityName}, ${order.delivery.warehouseName ?? order.delivery.addressLine ?? ""}\nОплата: ${order.payment.method}`,
   );
   void sendOrderConfirmation(order);
+  // Server-side Purchase у Meta CAPI (дедуплікація з Pixel через event_id = номер)
+  void sendMetaPurchase(order);
 
   if (data.paymentMethod === "online" || data.paymentMethod === "installments") {
     try {

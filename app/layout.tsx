@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
+import { ConsentBanner } from "@/components/analytics/ConsentBanner";
+import { Gtm, GtmNoScript } from "@/components/analytics/Gtm";
 import { Providers } from "@/components/providers";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { catalog } from "@/lib/catalog";
@@ -43,12 +45,15 @@ export default async function RootLayout({
   return (
     <html lang="uk" className={`${cormorant.variable} ${montserrat.variable} h-full`}>
       <body className="flex min-h-full flex-col">
+        <Gtm />
+        <GtmNoScript />
         <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
         <Providers>
           <Header nav={nav} />
           <main className="flex-1">{children}</main>
           <Footer />
         </Providers>
+        <ConsentBanner />
       </body>
     </html>
   );

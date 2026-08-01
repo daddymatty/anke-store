@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { toggleWishlist } from "@/app/actions/wishlist";
 import { IconClose, IconHeart } from "@/components/ui/icons";
 import { backdropFade, modalPanel } from "@/lib/motion";
+import { pushEcommerce, pushMicro, toGa4Item } from "@/lib/analytics";
 import { formatPrice } from "@/lib/money";
 import {
   getWishlistServerSnapshot,
@@ -34,9 +35,19 @@ export function CardActions({ product }: { product: ProductCard }) {
   const onHeart = () => {
     if (pending) return;
     startTransition(async () => {
-      await toggleWishlist(product.slug);
+      const { added } = await toggleWishlist(product.slug);
       notifyWishlistChanged();
+      if (added) pushEcommerce("add_to_wishlist", { items: [toGa4Item(product)] });
     });
+  };
+
+  const onQuickView = () => {
+    setQuickOpen(true);
+    pushMicro("quick_view_open", { item_id: product.sku });
+  };
+
+  const onSelectItem = () => {
+    pushEcommerce("select_item", { items: [toGa4Item(product)] });
   };
 
   return (
@@ -59,7 +70,7 @@ export function CardActions({ product }: { product: ProductCard }) {
 
         <button
           type="button"
-          onClick={() => setQuickOpen(true)}
+          onClick={onQuickView}
           className="pointer-events-auto absolute inset-x-0 bottom-0 hidden bg-paper/90 py-2.5 text-center text-[12px] uppercase tracking-[0.12em] opacity-0 backdrop-blur-sm transition-opacity duration-200 focus-visible:opacity-100 group-hover:opacity-100 lg:block"
         >
           Швидкий перегляд
@@ -67,13 +78,15 @@ export function CardActions({ product }: { product: ProductCard }) {
       </div>
 
       <AnimatePresence>
-        {quickOpen && <QuickView product={product} onClose={() => setQuickOpen(false)} />}
+        {quickOpen && (
+          <QuickView product={product} onClose={() => setQuickOpen(false)} onSelect={onSelectItem} />
+        )}
       </AnimatePresence>
     </>
   );
 }
 
-function QuickView({ product, onClose }: { product: ProductCard; onClose: () => void }) {
+function QuickView({ product, onClose, onSelect }: { product: ProductCard; onClose: () => void; onSelect: () => void }) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     document.addEventListener("keydown", onKey);
@@ -150,7 +163,10 @@ function QuickView({ product, onClose }: { product: ProductCard; onClose: () => 
             <Link
               href={`/product/${product.slug}`}
               className="block w-full bg-ink py-3.5 text-center text-[13px] font-medium uppercase tracking-[0.14em] text-paper transition-colors hover:bg-ink/85"
-              onClick={onClose}
+              onClick={() => {
+                onSelect();
+                onClose();
+              }}
             >
               Переглянути товар
             </Link>

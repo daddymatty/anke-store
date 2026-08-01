@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SearchTracker } from "@/components/analytics/trackers";
 import { Breadcrumbs } from "@/components/shop/Breadcrumbs";
 import { ProductGrid } from "@/components/shop/ProductGrid";
 import { Container } from "@/components/ui/Container";
@@ -23,6 +24,7 @@ export default async function SearchPage({
 
   return (
     <Container className="py-6 md:py-10">
+      <SearchTracker query={query} results={results.length} />
       <Breadcrumbs items={[{ title: "Пошук", href: "/poshuk" }]} />
       <h1 className="mt-5 font-display text-display-sm font-light md:text-display">
         {query ? `Результати за «${query}»` : "Пошук"}

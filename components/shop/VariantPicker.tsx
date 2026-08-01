@@ -8,6 +8,7 @@ import { z } from "zod";
 import { addToCart } from "@/app/actions/cart";
 import { notifyWhenAvailable } from "@/app/actions/notify";
 import { toggleWishlist } from "@/app/actions/wishlist";
+import { pushEcommerce, pushMicro } from "@/lib/analytics";
 import { notifyCartChanged, openCartDrawer } from "@/lib/cart-client";
 import { notifyWishlistChanged } from "@/lib/wishlist-client";
 import { IconHeart } from "@/components/ui/icons";
@@ -56,7 +57,10 @@ export function VariantPicker({ slug, sizes, colors, currentColor, modelParams, 
 
   const onNotify = handleSubmit(async ({ email }) => {
     const res = await notifyWhenAvailable({ slug, size: selected ?? sizes[0]?.size ?? "", email });
-    if (res.ok) setNotifySent(true);
+    if (res.ok) {
+      setNotifySent(true);
+      pushMicro("notify_me", { item_id: slug, size: selected });
+    }
   });
 
   const onAddToCart = () => {
@@ -69,6 +73,7 @@ export function VariantPicker({ slug, sizes, colors, currentColor, modelParams, 
     startTransition(async () => {
       await addToCart(slug, size, 1);
       notifyCartChanged();
+      pushEcommerce("add_to_cart", { items: [{ item_id: slug, item_variant: size, quantity: 1 }] });
       setAddedFlash(true);
       openCartDrawer();
       setTimeout(() => setAddedFlash(false), 1800);
@@ -79,6 +84,7 @@ export function VariantPicker({ slug, sizes, colors, currentColor, modelParams, 
     startTransition(async () => {
       await toggleWishlist(slug);
       notifyWishlistChanged();
+      pushEcommerce("add_to_wishlist", { items: [{ item_id: slug, quantity: 1 }] });
     });
   };
 
@@ -125,7 +131,10 @@ export function VariantPicker({ slug, sizes, colors, currentColor, modelParams, 
             </p>
             <button
               type="button"
-              onClick={() => setChartOpen(true)}
+              onClick={() => {
+                setChartOpen(true);
+                pushMicro("size_chart_open", { item_id: slug });
+              }}
               className="text-[12px] text-muted underline underline-offset-4 transition-colors hover:text-ink"
               data-analytics="size-chart-open"
             >
