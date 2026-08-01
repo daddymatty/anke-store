@@ -13,7 +13,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/checkout", "/dyakuyemo/", "/kabinet", "/vishlist", "/poshuk"],
     },
-    sitemap: [`${SITE.url}/sitemap/0.xml`, `${SITE.url}/sitemap/1.xml`, `${SITE.url}/sitemap/2.xml`],
+    sitemap: [0, 1, 2, 3].map((i) => `${SITE.url}/sitemap/${i}.xml`),
     host: SITE.url,
   };
 }

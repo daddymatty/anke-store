@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { catalog } from "@/lib/catalog";
 import type { CategoryNode } from "@/lib/catalog/types";
 import { SITE } from "@/lib/site";
+import { BLOG } from "@/content/blog";
 
 /**
  * Sitemap-індекс: /sitemap/0.xml — статичні, /sitemap/1.xml — категорії,
@@ -11,7 +12,7 @@ import { SITE } from "@/lib/site";
  */
 
 export async function generateSitemaps() {
-  return [{ id: 0 }, { id: 1 }, { id: 2 }];
+  return [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }];
 }
 
 const STATIC_PATHS = [
@@ -62,11 +63,21 @@ export default async function sitemap({
     return urls;
   }
 
-  const slugs = await catalog.getAllProductSlugs();
-  return slugs.map((slug) => ({
-    url: `${SITE.url}/product/${slug}`,
-    lastModified: now,
-    changeFrequency: "daily",
-    priority: 0.7,
+  if (id === 2) {
+    const slugs = await catalog.getAllProductSlugs();
+    return slugs.map((slug) => ({
+      url: `${SITE.url}/product/${slug}`,
+      lastModified: now,
+      changeFrequency: "daily" as const,
+      priority: 0.7,
+    }));
+  }
+
+  // id === 3: блог (lastmod — реальна дата публікації)
+  return BLOG.map((a) => ({
+    url: `${SITE.url}/blog/${a.slug}`,
+    lastModified: new Date(a.datePublished),
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
   }));
 }
