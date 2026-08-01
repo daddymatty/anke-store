@@ -9,6 +9,7 @@ import { addToCart } from "@/app/actions/cart";
 import { notifyWhenAvailable } from "@/app/actions/notify";
 import { toggleWishlist } from "@/app/actions/wishlist";
 import { pushEcommerce, pushMicro } from "@/lib/analytics";
+import { flyToCart } from "@/lib/fly-to-cart";
 import { notifyCartChanged, openCartDrawer } from "@/lib/cart-client";
 import { notifyWishlistChanged } from "@/lib/wishlist-client";
 import { IconHeart } from "@/components/ui/icons";
@@ -70,6 +71,7 @@ export function VariantPicker({ slug, sizes, colors, currentColor, modelParams, 
     }
     if (selectedStock && !selectedStock.inStock) return;
     const size = oneSize ? sizes[0].size : selected!;
+    flyToCart(document.querySelector<HTMLElement>("[data-gallery-main] img"));
     startTransition(async () => {
       await addToCart(slug, size, 1);
       notifyCartChanged();

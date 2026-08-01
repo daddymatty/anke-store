@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { CartDrawer } from "@/components/shop/CartDrawer";
 import { Logo } from "@/components/ui/Logo";
 import { IconBag, IconHeart, IconMenu, IconSearch, IconUser } from "@/components/ui/icons";
@@ -122,14 +123,21 @@ export function Header({ nav }: { nav: NavEntry[] }) {
             onClick={() => setCartOpen(true)}
           >
             <IconBag className="h-[22px] w-[22px]" />
-            {count > 0 && (
-              <span
-                aria-hidden="true"
-                className="absolute -right-0.5 top-0.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-rose px-1 text-[10px] font-medium text-paper"
-              >
-                {count}
-              </span>
-            )}
+            <AnimatePresence>
+              {count > 0 && (
+                <motion.span
+                  key={count}
+                  aria-hidden="true"
+                  initial={{ scale: 0.4 }}
+                  animate={{ scale: 1 }}
+                  exit={{ scale: 0, opacity: 0 }}
+                  transition={{ type: "spring", stiffness: 500, damping: 18 }}
+                  className="absolute -right-0.5 top-0.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-rose px-1 text-[10px] font-medium text-paper"
+                >
+                  {count}
+                </motion.span>
+              )}
+            </AnimatePresence>
           </button>
         </div>
 

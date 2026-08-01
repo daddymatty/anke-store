@@ -43,6 +43,7 @@ export function ProductGallery({ images, title }: { images: ProductImage[]; titl
             onClick={() => setZoomOpen(true)}
             className="relative block aspect-[3/4] w-full cursor-zoom-in overflow-hidden bg-beige"
             aria-label="Збільшити фото"
+            data-gallery-main
           >
             <AnimatePresence mode="popLayout" initial={false}>
               <motion.div
@@ -79,7 +80,11 @@ export function ProductGallery({ images, title }: { images: ProductImage[]; titl
           }}
         >
           {images.map((img, i) => (
-            <div key={i} className="relative aspect-[3/4] w-[88%] flex-shrink-0 snap-start overflow-hidden bg-beige">
+            <div
+              key={i}
+              className="relative aspect-[3/4] w-[88%] flex-shrink-0 snap-start overflow-hidden bg-beige"
+              {...(i === 0 ? { "data-gallery-main": true } : {})}
+            >
               <Image
                 src={img.url}
                 alt={img.alt}

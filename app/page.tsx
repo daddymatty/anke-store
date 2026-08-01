@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HeroTitle } from "@/components/motion/HeroTitle";
+import { ParallaxImage } from "@/components/motion/ParallaxImage";
+import { Reveal } from "@/components/motion/Reveal";
 import { ProductCard } from "@/components/shop/ProductCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink } from "@/components/ui/Button";
@@ -25,13 +28,15 @@ export default async function Home() {
       <JsonLd data={localBusinessJsonLd()} />
       {/* Hero */}
       <section className="bg-beige">
-        <Container className="flex min-h-[62vh] flex-col items-start justify-center py-20">
+        <Container className="grid min-h-[62vh] items-center gap-10 py-16 lg:grid-cols-[3fr_2fr]">
+          <div>
           <p className="text-[12px] font-medium uppercase tracking-[0.22em] text-rose-deep">
             Нова колекція
           </p>
-          <h1 className="mt-4 max-w-2xl font-display text-display-sm font-light md:text-display-lg">
-            Одяг, у якому повітря більше, ніж тканини
-          </h1>
+          <HeroTitle
+            text="Одяг, у якому повітря більше, ніж тканини"
+            className="mt-4 max-w-2xl font-display text-display-sm font-light md:text-display-lg"
+          />
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
             Сукні, костюми і трикотаж українського виробництва. Доставка Новою Поштою
             1–3 дні, примірка у шоурумі в Києві.
@@ -44,6 +49,14 @@ export default async function Home() {
               Каталог
             </ButtonLink>
           </div>
+          </div>
+          <ParallaxImage
+            src="/demo/powder.jpg"
+            alt="Нова колекція ANKE — пудрові відтінки сезону"
+            priority
+            sizes="(max-width: 1024px) 0px, 38vw"
+            className="hidden aspect-[3/4] max-h-[68vh] w-full lg:block"
+          />
         </Container>
       </section>
 

@@ -13,8 +13,10 @@ export function Gtm() {
 
   return (
     <>
-      <Script id="consent-default" strategy="beforeInteractive">
-        {`window.dataLayer = window.dataLayer || [];
+      {/* Інлайновий скрипт: виконується під час парсингу HTML — гарантовано ДО GTM */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('consent', 'default', {
   ad_storage: 'denied',
@@ -24,8 +26,9 @@ gtag('consent', 'default', {
   wait_for_update: 500
 });
 gtag('set', 'ads_data_redaction', true);
-gtag('set', 'url_passthrough', true);`}
-      </Script>
+gtag('set', 'url_passthrough', true);`,
+        }}
+      />
       {gtmId && (
         <Script id="gtm-loader" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
