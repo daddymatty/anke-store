@@ -1,10 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { CartDrawer } from "@/components/shop/CartDrawer";
 import { Logo } from "@/components/ui/Logo";
 import { IconBag, IconHeart, IconMenu, IconSearch, IconUser } from "@/components/ui/icons";
+import {
+  cartCount,
+  getCartServerSnapshot,
+  getCartSnapshot,
+  subscribeCart,
+} from "@/lib/cart-client";
 import type { NavEntry } from "@/lib/nav";
+import { SITE } from "@/lib/site";
 import { MegaMenu } from "./MegaMenu";
 import { MobileMenu } from "./MobileMenu";
 import { SearchOverlay } from "./SearchOverlay";
@@ -18,13 +26,22 @@ export function Header({ nav }: { nav: NavEntry[] }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
   const [megaFor, setMegaFor] = useState<string | null>(null);
+  const count = cartCount(
+    useSyncExternalStore(subscribeCart, getCartSnapshot, getCartServerSnapshot),
+  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const onOpenCart = () => setCartOpen(true);
+    window.addEventListener("anke:open-cart", onOpenCart);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("anke:open-cart", onOpenCart);
+    };
   }, []);
 
   const activeMega = nav.find((n) => n.href === megaFor && n.columns?.length);
@@ -98,9 +115,21 @@ export function Header({ nav }: { nav: NavEntry[] }) {
           <Link href="/vishlist" className="hidden p-2 md:block" aria-label="Вішліст">
             <IconHeart className="h-[22px] w-[22px]" />
           </Link>
-          <button type="button" className="relative p-2" aria-label="Кошик">
+          <button
+            type="button"
+            className="relative p-2"
+            aria-label={count > 0 ? `Кошик, ${count} тов.` : "Кошик"}
+            onClick={() => setCartOpen(true)}
+          >
             <IconBag className="h-[22px] w-[22px]" />
-            {/* Лічильник з'явиться з кошиком (Етап 6) */}
+            {count > 0 && (
+              <span
+                aria-hidden="true"
+                className="absolute -right-0.5 top-0.5 flex h-4.5 min-w-4.5 items-center justify-center rounded-full bg-rose px-1 text-[10px] font-medium text-paper"
+              >
+                {count}
+              </span>
+            )}
           </button>
         </div>
 
@@ -115,6 +144,11 @@ export function Header({ nav }: { nav: NavEntry[] }) {
 
       <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} nav={nav} />
       <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
+      <CartDrawer
+        open={cartOpen}
+        onClose={() => setCartOpen(false)}
+        freeShippingFrom={SITE.freeShippingFrom * 100}
+      />
     </header>
   );
 }

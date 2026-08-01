@@ -24,6 +24,7 @@ const PAGE_SIZE_UPSTREAM = 100;
 
 type MedusaImage = { url: string };
 type MedusaVariant = {
+  id: string;
   title: string;
   sku: string | null;
   inventory_quantity?: number;
@@ -156,6 +157,7 @@ export class MedusaProvider implements CatalogProvider {
     const sizes = mp.variants.map((v) => ({
       size: v.title,
       inStock: (v.inventory_quantity ?? 0) > 0,
+      variantId: v.id,
     }));
     const price = mp.variants[0]?.calculated_price?.calculated_amount ?? 0;
     const compareAt = typeof meta.compareAtPrice === "number" ? meta.compareAtPrice : undefined;

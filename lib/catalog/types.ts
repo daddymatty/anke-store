@@ -31,6 +31,8 @@ export type SizeStock = {
   /** "XS" | "S" | "M" | "L" | "XL" | "36".. для взуття | "One size" */
   size: string;
   inStock: boolean;
+  /** ID варіанта в Medusa (для кошика/замовлень); у локальному сіді відсутній */
+  variantId?: string;
 };
 
 /** Інший колір цього ж товару = окремий продукт (окремий URL для індексації) */

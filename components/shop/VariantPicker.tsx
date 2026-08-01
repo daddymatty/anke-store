@@ -5,8 +5,10 @@ import { useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import { addToCart } from "@/app/actions/cart";
 import { notifyWhenAvailable } from "@/app/actions/notify";
 import { toggleWishlist } from "@/app/actions/wishlist";
+import { notifyCartChanged, openCartDrawer } from "@/lib/cart-client";
 import { notifyWishlistChanged } from "@/lib/wishlist-client";
 import { IconHeart } from "@/components/ui/icons";
 import type { ColorSibling, SizeStock } from "@/lib/catalog/types";
@@ -63,9 +65,14 @@ export function VariantPicker({ slug, sizes, colors, currentColor, modelParams, 
       return;
     }
     if (selectedStock && !selectedStock.inStock) return;
-    // TODO(Етап 6): серверний кошик Medusa; поки — візуальний фідбек
-    setAddedFlash(true);
-    setTimeout(() => setAddedFlash(false), 1800);
+    const size = oneSize ? sizes[0].size : selected!;
+    startTransition(async () => {
+      await addToCart(slug, size, 1);
+      notifyCartChanged();
+      setAddedFlash(true);
+      openCartDrawer();
+      setTimeout(() => setAddedFlash(false), 1800);
+    });
   };
 
   const onWishlist = () => {
