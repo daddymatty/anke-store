@@ -1,0 +1,3751 @@
+{
+ "categories": [
+  {
+   "id": "cat_odyah",
+   "slug": "odyah",
+   "path": [
+    "odyah"
+   ],
+   "title": "Одяг",
+   "description": "Жіночий одяг ANKE: сукні, костюми, трикотаж і верхній одяг українського виробництва.",
+   "children": [
+    {
+     "id": "cat_odyah-sukni",
+     "slug": "sukni",
+     "path": [
+      "odyah",
+      "sukni"
+     ],
+     "title": "Сукні",
+     "description": "Сукні ANKE — від лляних міді на щодень до атласних вечірніх.",
+     "children": [
+      {
+       "id": "cat_odyah-sukni-midi",
+       "slug": "midi",
+       "path": [
+        "odyah",
+        "sukni",
+        "midi"
+       ],
+       "title": "Сукні міді",
+       "description": "Сукні міді — довжина, що працює і в офісі, і на вечері.",
+       "children": []
+      },
+      {
+       "id": "cat_odyah-sukni-maksi",
+       "slug": "maksi",
+       "path": [
+        "odyah",
+        "sukni",
+        "maksi"
+       ],
+       "title": "Сукні максі",
+       "description": "Максі-сукні з легких тканин на теплий сезон.",
+       "children": []
+      },
+      {
+       "id": "cat_odyah-sukni-mini",
+       "slug": "mini",
+       "path": [
+        "odyah",
+        "sukni",
+        "mini"
+       ],
+       "title": "Сукні міні",
+       "description": "Міні-сукні: твід, бавовна, впевнені силуети.",
+       "children": []
+      },
+      {
+       "id": "cat_odyah-sukni-vechirni",
+       "slug": "vechirni",
+       "path": [
+        "odyah",
+        "sukni",
+        "vechirni"
+       ],
+       "title": "Вечірні сукні",
+       "description": "Атлас і шовк для особливих подій.",
+       "children": []
+      }
+     ]
+    },
+    {
+     "id": "cat_odyah-kostyumy",
+     "slug": "kostyumy",
+     "path": [
+      "odyah",
+      "kostyumy"
+     ],
+     "title": "Костюми",
+     "description": "Жіночі костюми: льон на літо, вовна на прохолодний сезон.",
+     "children": []
+    },
+    {
+     "id": "cat_odyah-bluzy-sorochky",
+     "slug": "bluzy-sorochky",
+     "path": [
+      "odyah",
+      "bluzy-sorochky"
+     ],
+     "title": "Блузи та сорочки",
+     "description": "Шовкові блузи й бавовняні сорочки вільного крою.",
+     "children": []
+    },
+    {
+     "id": "cat_odyah-spidnytsi",
+     "slug": "spidnytsi",
+     "path": [
+      "odyah",
+      "spidnytsi"
+     ],
+     "title": "Спідниці",
+     "description": "Спідниці міді та плісе.",
+     "children": []
+    },
+    {
+     "id": "cat_odyah-shtany",
+     "slug": "shtany",
+     "path": [
+      "odyah",
+      "shtany"
+     ],
+     "title": "Штани",
+     "description": "Палаццо, прямі та звужені силуети.",
+     "children": []
+    },
+    {
+     "id": "cat_odyah-trykotazh",
+     "slug": "trykotazh",
+     "path": [
+      "odyah",
+      "trykotazh"
+     ],
+     "title": "Трикотаж",
+     "description": "Кашемір і вовна: джемпери, кардигани.",
+     "children": []
+    },
+    {
+     "id": "cat_odyah-verkhniy-odyah",
+     "slug": "verkhniy-odyah",
+     "path": [
+      "odyah",
+      "verkhniy-odyah"
+     ],
+     "title": "Верхній одяг",
+     "description": "Пальта й тренчі на міжсезоння.",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "cat_vzuttya",
+   "slug": "vzuttya",
+   "path": [
+    "vzuttya"
+   ],
+   "title": "Взуття",
+   "description": "Шкіряне взуття ANKE: босоніжки, балетки.",
+   "children": []
+  },
+  {
+   "id": "cat_aksesuary",
+   "slug": "aksesuary",
+   "path": [
+    "aksesuary"
+   ],
+   "title": "Аксесуари",
+   "description": "Аксесуари зі шкіри та шовку.",
+   "children": [
+    {
+     "id": "cat_aksesuary-sumky",
+     "slug": "sumky",
+     "path": [
+      "aksesuary",
+      "sumky"
+     ],
+     "title": "Сумки",
+     "description": "Шкіряні сумки мінімалістичних форм.",
+     "children": []
+    },
+    {
+     "id": "cat_aksesuary-remeni",
+     "slug": "remeni",
+     "path": [
+      "aksesuary",
+      "remeni"
+     ],
+     "title": "Ремені",
+     "description": "Шкіряні ремені ручної роботи.",
+     "children": []
+    },
+    {
+     "id": "cat_aksesuary-khustky",
+     "slug": "khustky",
+     "path": [
+      "aksesuary",
+      "khustky"
+     ],
+     "title": "Хустки",
+     "description": "Шовкові хустки з авторськими принтами.",
+     "children": []
+    }
+   ]
+  },
+  {
+   "id": "cat_prykrasy",
+   "slug": "prykrasy",
+   "path": [
+    "prykrasy"
+   ],
+   "title": "Прикраси",
+   "description": "Лаконічні прикраси з позолотою.",
+   "children": []
+  }
+ ],
+ "products": [
+  {
+   "id": "prod_suknia-midi-lliana-solomiia-molochnyi",
+   "slug": "suknia-midi-lliana-solomiia-molochnyi",
+   "title": "Сукня міді лляна «Соломія» — молочний",
+   "brand": "ANKE",
+   "sku": "ANK-101-1",
+   "price": 289000,
+   "images": [
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Молочний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Молочний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Молочний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Молочний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Молочний",
+    "hex": "#F3EEE5"
+   },
+   "colorGroupId": "grp-suknia-midi-lliana-solomiia",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": false
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "midi"
+   ],
+   "material": "Льон",
+   "description": "Сукня міді з натурального льону з відрізною талією і спідницею-кльош. Тримає форму, дихає у спеку і не потребує складного догляду. Ґудзики з натурального перламутру, бічні кишені в швах.",
+   "materialFull": "Льон 100%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Оливковий",
+     "hex": "#ABAF97",
+     "productSlug": "suknia-midi-lliana-solomiia-olyvkovyi"
+    },
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "suknia-midi-lliana-solomiia-chornyi"
+    }
+   ],
+   "outfitWith": [
+    "bosonizhky-shkiriani-miia-bezhevyi",
+    "sumka-shkiriana-minimal-chornyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 2
+   },
+   "reviews": [
+    {
+     "author": "Олена",
+     "rating": 5,
+     "text": "Льон щільний, не просвічує. Розмір відповідає сітці, брала S на 44.",
+     "date": "2026-06-14",
+     "id": "rev-suknia-midi-lliana-solomiia-molochnyi-0",
+     "approved": true
+    },
+    {
+     "author": "Ірина",
+     "rating": 5,
+     "text": "Найкраща сукня літа, ношу і в офіс, і на прогулянки.",
+     "date": "2026-07-02",
+     "id": "rev-suknia-midi-lliana-solomiia-molochnyi-1",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_suknia-midi-lliana-solomiia-olyvkovyi",
+   "slug": "suknia-midi-lliana-solomiia-olyvkovyi",
+   "title": "Сукня міді лляна «Соломія» — оливковий",
+   "brand": "ANKE",
+   "sku": "ANK-101-2",
+   "price": 289000,
+   "images": [
+    {
+     "url": "/demo/olive.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Оливковий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Оливковий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Оливковий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/olive.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Оливковий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Оливковий",
+    "hex": "#ABAF97"
+   },
+   "colorGroupId": "grp-suknia-midi-lliana-solomiia",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "midi"
+   ],
+   "material": "Льон",
+   "description": "Сукня міді з натурального льону з відрізною талією і спідницею-кльош. Тримає форму, дихає у спеку і не потребує складного догляду. Ґудзики з натурального перламутру, бічні кишені в швах.",
+   "materialFull": "Льон 100%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "suknia-midi-lliana-solomiia-molochnyi"
+    },
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "suknia-midi-lliana-solomiia-chornyi"
+    }
+   ],
+   "outfitWith": [
+    "bosonizhky-shkiriani-miia-bezhevyi",
+    "sumka-shkiriana-minimal-chornyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 2
+   },
+   "reviews": [
+    {
+     "author": "Олена",
+     "rating": 5,
+     "text": "Льон щільний, не просвічує. Розмір відповідає сітці, брала S на 44.",
+     "date": "2026-06-14",
+     "id": "rev-suknia-midi-lliana-solomiia-olyvkovyi-0",
+     "approved": true
+    },
+    {
+     "author": "Ірина",
+     "rating": 5,
+     "text": "Найкраща сукня літа, ношу і в офіс, і на прогулянки.",
+     "date": "2026-07-02",
+     "id": "rev-suknia-midi-lliana-solomiia-olyvkovyi-1",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_suknia-midi-lliana-solomiia-chornyi",
+   "slug": "suknia-midi-lliana-solomiia-chornyi",
+   "title": "Сукня міді лляна «Соломія» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-101-3",
+   "price": 289000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Сукня міді лляна «Соломія» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-suknia-midi-lliana-solomiia",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": false
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "midi"
+   ],
+   "material": "Льон",
+   "description": "Сукня міді з натурального льону з відрізною талією і спідницею-кльош. Тримає форму, дихає у спеку і не потребує складного догляду. Ґудзики з натурального перламутру, бічні кишені в швах.",
+   "materialFull": "Льон 100%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "suknia-midi-lliana-solomiia-molochnyi"
+    },
+    {
+     "name": "Оливковий",
+     "hex": "#ABAF97",
+     "productSlug": "suknia-midi-lliana-solomiia-olyvkovyi"
+    }
+   ],
+   "outfitWith": [
+    "bosonizhky-shkiriani-miia-bezhevyi",
+    "sumka-shkiriana-minimal-chornyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 2
+   },
+   "reviews": [
+    {
+     "author": "Олена",
+     "rating": 5,
+     "text": "Льон щільний, не просвічує. Розмір відповідає сітці, брала S на 44.",
+     "date": "2026-06-14",
+     "id": "rev-suknia-midi-lliana-solomiia-chornyi-0",
+     "approved": true
+    },
+    {
+     "author": "Ірина",
+     "rating": 5,
+     "text": "Найкраща сукня літа, ношу і в офіс, і на прогулянки.",
+     "date": "2026-07-02",
+     "id": "rev-suknia-midi-lliana-solomiia-chornyi-1",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_suknia-maksi-z-viskozy-adelina-pudrovyi",
+   "slug": "suknia-maksi-z-viskozy-adelina-pudrovyi",
+   "title": "Сукня максі з віскози «Аделіна» — пудровий",
+   "brand": "ANKE",
+   "sku": "ANK-102-1",
+   "price": 329000,
+   "images": [
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Пудровий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Пудровий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Пудровий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Пудровий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Пудровий",
+    "hex": "#EAD2DB"
+   },
+   "colorGroupId": "grp-suknia-maksi-z-viskozy-adelina",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "maksi"
+   ],
+   "material": "Віскоза",
+   "description": "Струмка максі-сукня з м'якої віскози з регульованими бретелями і розрізом. Тканина приємно холодить і красиво драпірується в русі. Підкладка по ліфу, потайна блискавка.",
+   "materialFull": "Віскоза 95%, еластан 5%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Блакитний",
+     "hex": "#BFCEDC",
+     "productSlug": "suknia-maksi-z-viskozy-adelina-blakytnyi"
+    }
+   ],
+   "outfitWith": [
+    "khustka-shovkova-polit-pudrovyi",
+    "bosonizhky-shkiriani-miia-bezhevyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_suknia-maksi-z-viskozy-adelina-blakytnyi",
+   "slug": "suknia-maksi-z-viskozy-adelina-blakytnyi",
+   "title": "Сукня максі з віскози «Аделіна» — блакитний",
+   "brand": "ANKE",
+   "sku": "ANK-102-2",
+   "price": 329000,
+   "images": [
+    {
+     "url": "/demo/sky.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Блакитний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Блакитний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Блакитний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/sky.jpg",
+     "alt": "Сукня максі з віскози «Аделіна» — Блакитний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Блакитний",
+    "hex": "#BFCEDC"
+   },
+   "colorGroupId": "grp-suknia-maksi-z-viskozy-adelina",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "maksi"
+   ],
+   "material": "Віскоза",
+   "description": "Струмка максі-сукня з м'якої віскози з регульованими бретелями і розрізом. Тканина приємно холодить і красиво драпірується в русі. Підкладка по ліфу, потайна блискавка.",
+   "materialFull": "Віскоза 95%, еластан 5%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Пудровий",
+     "hex": "#EAD2DB",
+     "productSlug": "suknia-maksi-z-viskozy-adelina-pudrovyi"
+    }
+   ],
+   "outfitWith": [
+    "khustka-shovkova-polit-pudrovyi",
+    "bosonizhky-shkiriani-miia-bezhevyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_suknia-mini-tvidova-iren-bezhevyi",
+   "slug": "suknia-mini-tvidova-iren-bezhevyi",
+   "title": "Сукня міні твідова «Ірен» — бежевий",
+   "brand": "ANKE",
+   "sku": "ANK-103-1",
+   "price": 269000,
+   "compareAtPrice": 319000,
+   "images": [
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Бежевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Бежевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Бежевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Бежевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бежевий",
+    "hex": "#DFD2BE"
+   },
+   "colorGroupId": "grp-suknia-mini-tvidova-iren",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": false
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "mini"
+   ],
+   "material": "Твід",
+   "description": "Твідова міні-сукня прямого крою з фактурною нитку і підкладкою. Класика, що працює з балетками вдень і підборами ввечері. Кромка з бахромою, золотисті ґудзики.",
+   "materialFull": "Поліестер 60%, вовна 25%, бавовна 15%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "suknia-mini-tvidova-iren-chornyi"
+    }
+   ],
+   "outfitWith": [
+    "baletky-shkiriani-hratsiia-chornyi"
+   ],
+   "rating": {
+    "value": 4,
+    "count": 1
+   },
+   "reviews": [
+    {
+     "author": "Марія",
+     "rating": 4,
+     "text": "Якість чудова, але майнула швидко — беріть свій розмір одразу.",
+     "date": "2026-05-21",
+     "id": "rev-suknia-mini-tvidova-iren-bezhevyi-0",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_suknia-mini-tvidova-iren-chornyi",
+   "slug": "suknia-mini-tvidova-iren-chornyi",
+   "title": "Сукня міні твідова «Ірен» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-103-2",
+   "price": 269000,
+   "compareAtPrice": 319000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Сукня міні твідова «Ірен» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-suknia-mini-tvidova-iren",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "mini"
+   ],
+   "material": "Твід",
+   "description": "Твідова міні-сукня прямого крою з фактурною нитку і підкладкою. Класика, що працює з балетками вдень і підборами ввечері. Кромка з бахромою, золотисті ґудзики.",
+   "materialFull": "Поліестер 60%, вовна 25%, бавовна 15%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Бежевий",
+     "hex": "#DFD2BE",
+     "productSlug": "suknia-mini-tvidova-iren-bezhevyi"
+    }
+   ],
+   "outfitWith": [
+    "baletky-shkiriani-hratsiia-chornyi"
+   ],
+   "rating": {
+    "value": 4,
+    "count": 1
+   },
+   "reviews": [
+    {
+     "author": "Марія",
+     "rating": 4,
+     "text": "Якість чудова, але майнула швидко — беріть свій розмір одразу.",
+     "date": "2026-05-21",
+     "id": "rev-suknia-mini-tvidova-iren-chornyi-0",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_vechirnia-suknia-atlasna-nich-bordo",
+   "slug": "vechirnia-suknia-atlasna-nich-bordo",
+   "title": "Вечірня сукня атласна «Ніч» — бордо",
+   "brand": "ANKE",
+   "sku": "ANK-104-1",
+   "price": 459000,
+   "images": [
+    {
+     "url": "/demo/bordeaux.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Бордо — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Бордо — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Бордо — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/bordeaux.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Бордо — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бордо",
+    "hex": "#7E3F50"
+   },
+   "colorGroupId": "grp-vechirnia-suknia-atlasna-nich",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "vechirni"
+   ],
+   "material": "Атлас",
+   "description": "Атласна сукня в білизняному стилі з косим кроєм, що м'яко облягає силует. Тонкі бретелі регулюються, виріз на спині. Сукня, в якій нічого зайвого — тільки блиск тканини і лінія руху.",
+   "materialFull": "Поліестер 97%, еластан 3%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "vechirnia-suknia-atlasna-nich-chornyi"
+    }
+   ],
+   "outfitWith": [
+    "kolie-liniia-zolotystyi",
+    "serezhky-kraplia-zolotystyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_vechirnia-suknia-atlasna-nich-chornyi",
+   "slug": "vechirnia-suknia-atlasna-nich-chornyi",
+   "title": "Вечірня сукня атласна «Ніч» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-104-2",
+   "price": 459000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Вечірня сукня атласна «Ніч» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-vechirnia-suknia-atlasna-nich",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "sukni",
+    "vechirni"
+   ],
+   "material": "Атлас",
+   "description": "Атласна сукня в білизняному стилі з косим кроєм, що м'яко облягає силует. Тонкі бретелі регулюються, виріз на спині. Сукня, в якій нічого зайвого — тільки блиск тканини і лінія руху.",
+   "materialFull": "Поліестер 97%, еластан 3%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Бордо",
+     "hex": "#7E3F50",
+     "productSlug": "vechirnia-suknia-atlasna-nich-bordo"
+    }
+   ],
+   "outfitWith": [
+    "kolie-liniia-zolotystyi",
+    "serezhky-kraplia-zolotystyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_kostium-llianyi-mriia-bezhevyi",
+   "slug": "kostium-llianyi-mriia-bezhevyi",
+   "title": "Костюм лляний «Мрія» — бежевий",
+   "brand": "ANKE",
+   "sku": "ANK-105-1",
+   "price": 489000,
+   "images": [
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Костюм лляний «Мрія» — Бежевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Костюм лляний «Мрія» — Бежевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Костюм лляний «Мрія» — Бежевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Костюм лляний «Мрія» — Бежевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бежевий",
+    "hex": "#DFD2BE"
+   },
+   "colorGroupId": "grp-kostium-llianyi-mriia",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "kostyumy"
+   ],
+   "material": "Льон",
+   "description": "Лляний костюм-двійка: вільний жакет без підкладки і штани-палаццо на високій посадці. Виглядає зібрано навіть у +30. Кожну частину можна носити окремо — з джинсами або базовою футболкою.",
+   "materialFull": "Льон 85%, віскоза 15%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "kostium-llianyi-mriia-molochnyi"
+    }
+   ],
+   "outfitWith": [
+    "bluza-shovkova-avrora-molochnyi",
+    "sumka-shkiriana-minimal-chornyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 1
+   },
+   "reviews": [
+    {
+     "author": "Наталія",
+     "rating": 5,
+     "text": "Купила на конференцію — отримала десяток компліментів.",
+     "date": "2026-06-30",
+     "id": "rev-kostium-llianyi-mriia-bezhevyi-0",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_kostium-llianyi-mriia-molochnyi",
+   "slug": "kostium-llianyi-mriia-molochnyi",
+   "title": "Костюм лляний «Мрія» — молочний",
+   "brand": "ANKE",
+   "sku": "ANK-105-2",
+   "price": 489000,
+   "images": [
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Костюм лляний «Мрія» — Молочний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Костюм лляний «Мрія» — Молочний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Костюм лляний «Мрія» — Молочний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Костюм лляний «Мрія» — Молочний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Молочний",
+    "hex": "#F3EEE5"
+   },
+   "colorGroupId": "grp-kostium-llianyi-mriia",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "kostyumy"
+   ],
+   "material": "Льон",
+   "description": "Лляний костюм-двійка: вільний жакет без підкладки і штани-палаццо на високій посадці. Виглядає зібрано навіть у +30. Кожну частину можна носити окремо — з джинсами або базовою футболкою.",
+   "materialFull": "Льон 85%, віскоза 15%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Бежевий",
+     "hex": "#DFD2BE",
+     "productSlug": "kostium-llianyi-mriia-bezhevyi"
+    }
+   ],
+   "outfitWith": [
+    "bluza-shovkova-avrora-molochnyi",
+    "sumka-shkiriana-minimal-chornyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 1
+   },
+   "reviews": [
+    {
+     "author": "Наталія",
+     "rating": 5,
+     "text": "Купила на конференцію — отримала десяток компліментів.",
+     "date": "2026-06-30",
+     "id": "rev-kostium-llianyi-mriia-molochnyi-0",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_kostium-briuchnyi-vovnianyi-klasyk-hrafitovyi",
+   "slug": "kostium-briuchnyi-vovnianyi-klasyk-hrafitovyi",
+   "title": "Костюм брючний вовняний «Класик» — графітовий",
+   "brand": "ANKE",
+   "sku": "ANK-106-1",
+   "price": 549000,
+   "compareAtPrice": 629000,
+   "images": [
+    {
+     "url": "/demo/graphite.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Графітовий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Графітовий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Графітовий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/graphite.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Графітовий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Графітовий",
+    "hex": "#5C5C5C"
+   },
+   "colorGroupId": "grp-kostium-briuchnyi-vovnianyi-klasyk",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": false
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "kostyumy"
+   ],
+   "material": "Вовна",
+   "description": "Строгий костюм з італійської вовняної тканини: однобортний жакет на підкладці і прямі штани зі стрілками. Той випадок, коли крій робить усе сам. Внутрішня кишеня, ґудзики в тон.",
+   "materialFull": "Вовна 70%, поліестер 28%, еластан 2%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "kostium-briuchnyi-vovnianyi-klasyk-chornyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_kostium-briuchnyi-vovnianyi-klasyk-chornyi",
+   "slug": "kostium-briuchnyi-vovnianyi-klasyk-chornyi",
+   "title": "Костюм брючний вовняний «Класик» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-106-2",
+   "price": 549000,
+   "compareAtPrice": 629000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Костюм брючний вовняний «Класик» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-kostium-briuchnyi-vovnianyi-klasyk",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "kostyumy"
+   ],
+   "material": "Вовна",
+   "description": "Строгий костюм з італійської вовняної тканини: однобортний жакет на підкладці і прямі штани зі стрілками. Той випадок, коли крій робить усе сам. Внутрішня кишеня, ґудзики в тон.",
+   "materialFull": "Вовна 70%, поліестер 28%, еластан 2%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Графітовий",
+     "hex": "#5C5C5C",
+     "productSlug": "kostium-briuchnyi-vovnianyi-klasyk-hrafitovyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_bluza-shovkova-avrora-molochnyi",
+   "slug": "bluza-shovkova-avrora-molochnyi",
+   "title": "Блуза шовкова «Аврора» — молочний",
+   "brand": "ANKE",
+   "sku": "ANK-107-1",
+   "price": 219000,
+   "images": [
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Блуза шовкова «Аврора» — Молочний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Блуза шовкова «Аврора» — Молочний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Блуза шовкова «Аврора» — Молочний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Блуза шовкова «Аврора» — Молочний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Молочний",
+    "hex": "#F3EEE5"
+   },
+   "colorGroupId": "grp-bluza-shovkova-avrora",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "bluzy-sorochky"
+   ],
+   "material": "Шовк",
+   "description": "Шовкова блуза з м'яким бантом-зав'язкою, який можна носити і розпущеним. Натуральний шовк красиво ловить світло і не електризується. Перламутрові ґудзики, подовжена спинка.",
+   "materialFull": "Шовк 92%, еластан 8%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Пудровий",
+     "hex": "#EAD2DB",
+     "productSlug": "bluza-shovkova-avrora-pudrovyi"
+    },
+    {
+     "name": "Блакитний",
+     "hex": "#BFCEDC",
+     "productSlug": "bluza-shovkova-avrora-blakytnyi"
+    }
+   ],
+   "outfitWith": [
+    "kostium-llianyi-mriia-bezhevyi",
+    "shtany-palatstso-flou-bezhevyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_bluza-shovkova-avrora-pudrovyi",
+   "slug": "bluza-shovkova-avrora-pudrovyi",
+   "title": "Блуза шовкова «Аврора» — пудровий",
+   "brand": "ANKE",
+   "sku": "ANK-107-2",
+   "price": 219000,
+   "images": [
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Блуза шовкова «Аврора» — Пудровий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Блуза шовкова «Аврора» — Пудровий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Блуза шовкова «Аврора» — Пудровий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Блуза шовкова «Аврора» — Пудровий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Пудровий",
+    "hex": "#EAD2DB"
+   },
+   "colorGroupId": "grp-bluza-shovkova-avrora",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "bluzy-sorochky"
+   ],
+   "material": "Шовк",
+   "description": "Шовкова блуза з м'яким бантом-зав'язкою, який можна носити і розпущеним. Натуральний шовк красиво ловить світло і не електризується. Перламутрові ґудзики, подовжена спинка.",
+   "materialFull": "Шовк 92%, еластан 8%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "bluza-shovkova-avrora-molochnyi"
+    },
+    {
+     "name": "Блакитний",
+     "hex": "#BFCEDC",
+     "productSlug": "bluza-shovkova-avrora-blakytnyi"
+    }
+   ],
+   "outfitWith": [
+    "kostium-llianyi-mriia-bezhevyi",
+    "shtany-palatstso-flou-bezhevyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_bluza-shovkova-avrora-blakytnyi",
+   "slug": "bluza-shovkova-avrora-blakytnyi",
+   "title": "Блуза шовкова «Аврора» — блакитний",
+   "brand": "ANKE",
+   "sku": "ANK-107-3",
+   "price": 219000,
+   "images": [
+    {
+     "url": "/demo/sky.jpg",
+     "alt": "Блуза шовкова «Аврора» — Блакитний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Блуза шовкова «Аврора» — Блакитний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Блуза шовкова «Аврора» — Блакитний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/sky.jpg",
+     "alt": "Блуза шовкова «Аврора» — Блакитний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Блакитний",
+    "hex": "#BFCEDC"
+   },
+   "colorGroupId": "grp-bluza-shovkova-avrora",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "bluzy-sorochky"
+   ],
+   "material": "Шовк",
+   "description": "Шовкова блуза з м'яким бантом-зав'язкою, який можна носити і розпущеним. Натуральний шовк красиво ловить світло і не електризується. Перламутрові ґудзики, подовжена спинка.",
+   "materialFull": "Шовк 92%, еластан 8%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "bluza-shovkova-avrora-molochnyi"
+    },
+    {
+     "name": "Пудровий",
+     "hex": "#EAD2DB",
+     "productSlug": "bluza-shovkova-avrora-pudrovyi"
+    }
+   ],
+   "outfitWith": [
+    "kostium-llianyi-mriia-bezhevyi",
+    "shtany-palatstso-flou-bezhevyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_sorochka-oversaiz-bavovniana-leia-molochnyi",
+   "slug": "sorochka-oversaiz-bavovniana-leia-molochnyi",
+   "title": "Сорочка оверсайз бавовняна «Лея» — молочний",
+   "brand": "ANKE",
+   "sku": "ANK-108-1",
+   "price": 179000,
+   "images": [
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Молочний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Молочний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Молочний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Молочний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Молочний",
+    "hex": "#F3EEE5"
+   },
+   "colorGroupId": "grp-sorochka-oversaiz-bavovniana-leia",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "bluzy-sorochky"
+   ],
+   "material": "Бавовна",
+   "description": "Оверсайз-сорочка зі щільної бавовни з чоловічого гардероба — тільки з жіночими пропорціями. Опущена лінія плеча, об'ємний рукав з широким манжетом. Ідеальна база під усе.",
+   "materialFull": "Бавовна 100%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Лавандовий",
+     "hex": "#C8C0DC",
+     "productSlug": "sorochka-oversaiz-bavovniana-leia-lavandovyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_sorochka-oversaiz-bavovniana-leia-lavandovyi",
+   "slug": "sorochka-oversaiz-bavovniana-leia-lavandovyi",
+   "title": "Сорочка оверсайз бавовняна «Лея» — лавандовий",
+   "brand": "ANKE",
+   "sku": "ANK-108-2",
+   "price": 179000,
+   "images": [
+    {
+     "url": "/demo/lavender.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Лавандовий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Лавандовий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Лавандовий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/lavender.jpg",
+     "alt": "Сорочка оверсайз бавовняна «Лея» — Лавандовий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Лавандовий",
+    "hex": "#C8C0DC"
+   },
+   "colorGroupId": "grp-sorochka-oversaiz-bavovniana-leia",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "bluzy-sorochky"
+   ],
+   "material": "Бавовна",
+   "description": "Оверсайз-сорочка зі щільної бавовни з чоловічого гардероба — тільки з жіночими пропорціями. Опущена лінія плеча, об'ємний рукав з широким манжетом. Ідеальна база під усе.",
+   "materialFull": "Бавовна 100%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "sorochka-oversaiz-bavovniana-leia-molochnyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_spidnytsia-midi-plise-khvylia-pudrovyi",
+   "slug": "spidnytsia-midi-plise-khvylia-pudrovyi",
+   "title": "Спідниця міді плісе «Хвиля» — пудровий",
+   "brand": "ANKE",
+   "sku": "ANK-109-1",
+   "price": 199000,
+   "images": [
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Пудровий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Пудровий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Пудровий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Пудровий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Пудровий",
+    "hex": "#EAD2DB"
+   },
+   "colorGroupId": "grp-spidnytsia-midi-plise-khvylia",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "spidnytsi"
+   ],
+   "material": "Поліестер",
+   "description": "Спідниця-плісе довжини міді на еластичному поясі. Тримає складку після прання, не мнеться у валізі. Рухається за кроком — саме за це ми її любимо.",
+   "materialFull": "Поліестер 100%",
+   "care": [
+    "Прання при 30°C",
+    "Не викручувати",
+    "Не прасувати плісировку"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Графітовий",
+     "hex": "#5C5C5C",
+     "productSlug": "spidnytsia-midi-plise-khvylia-hrafitovyi"
+    }
+   ],
+   "outfitWith": [
+    "dzhemper-kashemirovyi-khmara-molochnyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_spidnytsia-midi-plise-khvylia-hrafitovyi",
+   "slug": "spidnytsia-midi-plise-khvylia-hrafitovyi",
+   "title": "Спідниця міді плісе «Хвиля» — графітовий",
+   "brand": "ANKE",
+   "sku": "ANK-109-2",
+   "price": 199000,
+   "images": [
+    {
+     "url": "/demo/graphite.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Графітовий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Графітовий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Графітовий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/graphite.jpg",
+     "alt": "Спідниця міді плісе «Хвиля» — Графітовий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Графітовий",
+    "hex": "#5C5C5C"
+   },
+   "colorGroupId": "grp-spidnytsia-midi-plise-khvylia",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "spidnytsi"
+   ],
+   "material": "Поліестер",
+   "description": "Спідниця-плісе довжини міді на еластичному поясі. Тримає складку після прання, не мнеться у валізі. Рухається за кроком — саме за це ми її любимо.",
+   "materialFull": "Поліестер 100%",
+   "care": [
+    "Прання при 30°C",
+    "Не викручувати",
+    "Не прасувати плісировку"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Пудровий",
+     "hex": "#EAD2DB",
+     "productSlug": "spidnytsia-midi-plise-khvylia-pudrovyi"
+    }
+   ],
+   "outfitWith": [
+    "dzhemper-kashemirovyi-khmara-molochnyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_shtany-palatstso-flou-bezhevyi",
+   "slug": "shtany-palatstso-flou-bezhevyi",
+   "title": "Штани палаццо «Флоу» — бежевий",
+   "brand": "ANKE",
+   "sku": "ANK-110-1",
+   "price": 229000,
+   "images": [
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Штани палаццо «Флоу» — Бежевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Штани палаццо «Флоу» — Бежевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Штани палаццо «Флоу» — Бежевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Штани палаццо «Флоу» — Бежевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бежевий",
+    "hex": "#DFD2BE"
+   },
+   "colorGroupId": "grp-shtany-palatstso-flou",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "shtany"
+   ],
+   "material": "Віскоза",
+   "description": "Широкі штани на високій посадці з тканини, що струмує. Подовжують ноги і не сковують крок. Приховані кишені, застібка на гачок і потайну блискавку.",
+   "materialFull": "Віскоза 78%, поліестер 22%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "shtany-palatstso-flou-chornyi"
+    }
+   ],
+   "outfitWith": [
+    "bluza-shovkova-avrora-molochnyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_shtany-palatstso-flou-chornyi",
+   "slug": "shtany-palatstso-flou-chornyi",
+   "title": "Штани палаццо «Флоу» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-110-2",
+   "price": 229000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Штани палаццо «Флоу» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Штани палаццо «Флоу» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Штани палаццо «Флоу» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Штани палаццо «Флоу» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-shtany-palatstso-flou",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "shtany"
+   ],
+   "material": "Віскоза",
+   "description": "Широкі штани на високій посадці з тканини, що струмує. Подовжують ноги і не сковують крок. Приховані кишені, застібка на гачок і потайну блискавку.",
+   "materialFull": "Віскоза 78%, поліестер 22%",
+   "care": [
+    "Прання при 30°C у делікатному режимі",
+    "Не відбілювати",
+    "Прасування при низькій температурі"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Бежевий",
+     "hex": "#DFD2BE",
+     "productSlug": "shtany-palatstso-flou-bezhevyi"
+    }
+   ],
+   "outfitWith": [
+    "bluza-shovkova-avrora-molochnyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_dzhemper-kashemirovyi-khmara-molochnyi",
+   "slug": "dzhemper-kashemirovyi-khmara-molochnyi",
+   "title": "Джемпер кашеміровий «Хмара» — молочний",
+   "brand": "ANKE",
+   "sku": "ANK-111-1",
+   "price": 389000,
+   "images": [
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Молочний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Молочний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Молочний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Молочний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Молочний",
+    "hex": "#F3EEE5"
+   },
+   "colorGroupId": "grp-dzhemper-kashemirovyi-khmara",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "trykotazh"
+   ],
+   "material": "Кашемір",
+   "description": "Джемпер з кашеміру з мериносом — той, який не хочеться знімати. Невагомий, не колеться, тримає тепло без об'єму. Спущене плече, злегка подовжена спинка.",
+   "materialFull": "Кашемір 70%, вовна мериноса 30%",
+   "care": [
+    "Ручне прання при 30°C",
+    "Сушити горизонтально",
+    "Зберігати складеним"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Пудрово-рожевий",
+     "hex": "#D2A5B6",
+     "productSlug": "dzhemper-kashemirovyi-khmara-pudrovo-rozhevyi"
+    },
+    {
+     "name": "Блакитний",
+     "hex": "#BFCEDC",
+     "productSlug": "dzhemper-kashemirovyi-khmara-blakytnyi"
+    }
+   ],
+   "outfitWith": [
+    "spidnytsia-midi-plise-khvylia-pudrovyi",
+    "shtany-palatstso-flou-bezhevyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 2
+   },
+   "reviews": [
+    {
+     "author": "Вікторія",
+     "rating": 5,
+     "text": "М'якість неймовірна. Після трьох прань виглядає як новий.",
+     "date": "2026-03-08",
+     "id": "rev-dzhemper-kashemirovyi-khmara-molochnyi-0",
+     "approved": true
+    },
+    {
+     "author": "Дарія",
+     "rating": 5,
+     "text": "Брала мамі в подарунок, тепер замовляю собі.",
+     "date": "2026-04-17",
+     "id": "rev-dzhemper-kashemirovyi-khmara-molochnyi-1",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_dzhemper-kashemirovyi-khmara-pudrovo-rozhevyi",
+   "slug": "dzhemper-kashemirovyi-khmara-pudrovo-rozhevyi",
+   "title": "Джемпер кашеміровий «Хмара» — пудрово-рожевий",
+   "brand": "ANKE",
+   "sku": "ANK-111-2",
+   "price": 389000,
+   "images": [
+    {
+     "url": "/demo/dusty-rose.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Пудрово-рожевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Пудрово-рожевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Пудрово-рожевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/dusty-rose.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Пудрово-рожевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Пудрово-рожевий",
+    "hex": "#D2A5B6"
+   },
+   "colorGroupId": "grp-dzhemper-kashemirovyi-khmara",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": false
+    },
+    {
+     "size": "S",
+     "inStock": false
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "trykotazh"
+   ],
+   "material": "Кашемір",
+   "description": "Джемпер з кашеміру з мериносом — той, який не хочеться знімати. Невагомий, не колеться, тримає тепло без об'єму. Спущене плече, злегка подовжена спинка.",
+   "materialFull": "Кашемір 70%, вовна мериноса 30%",
+   "care": [
+    "Ручне прання при 30°C",
+    "Сушити горизонтально",
+    "Зберігати складеним"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "dzhemper-kashemirovyi-khmara-molochnyi"
+    },
+    {
+     "name": "Блакитний",
+     "hex": "#BFCEDC",
+     "productSlug": "dzhemper-kashemirovyi-khmara-blakytnyi"
+    }
+   ],
+   "outfitWith": [
+    "spidnytsia-midi-plise-khvylia-pudrovyi",
+    "shtany-palatstso-flou-bezhevyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 2
+   },
+   "reviews": [
+    {
+     "author": "Вікторія",
+     "rating": 5,
+     "text": "М'якість неймовірна. Після трьох прань виглядає як новий.",
+     "date": "2026-03-08",
+     "id": "rev-dzhemper-kashemirovyi-khmara-pudrovo-rozhevyi-0",
+     "approved": true
+    },
+    {
+     "author": "Дарія",
+     "rating": 5,
+     "text": "Брала мамі в подарунок, тепер замовляю собі.",
+     "date": "2026-04-17",
+     "id": "rev-dzhemper-kashemirovyi-khmara-pudrovo-rozhevyi-1",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_dzhemper-kashemirovyi-khmara-blakytnyi",
+   "slug": "dzhemper-kashemirovyi-khmara-blakytnyi",
+   "title": "Джемпер кашеміровий «Хмара» — блакитний",
+   "brand": "ANKE",
+   "sku": "ANK-111-3",
+   "price": 389000,
+   "images": [
+    {
+     "url": "/demo/sky.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Блакитний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Блакитний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Блакитний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/sky.jpg",
+     "alt": "Джемпер кашеміровий «Хмара» — Блакитний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Блакитний",
+    "hex": "#BFCEDC"
+   },
+   "colorGroupId": "grp-dzhemper-kashemirovyi-khmara",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "trykotazh"
+   ],
+   "material": "Кашемір",
+   "description": "Джемпер з кашеміру з мериносом — той, який не хочеться знімати. Невагомий, не колеться, тримає тепло без об'єму. Спущене плече, злегка подовжена спинка.",
+   "materialFull": "Кашемір 70%, вовна мериноса 30%",
+   "care": [
+    "Ручне прання при 30°C",
+    "Сушити горизонтально",
+    "Зберігати складеним"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 170 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Молочний",
+     "hex": "#F3EEE5",
+     "productSlug": "dzhemper-kashemirovyi-khmara-molochnyi"
+    },
+    {
+     "name": "Пудрово-рожевий",
+     "hex": "#D2A5B6",
+     "productSlug": "dzhemper-kashemirovyi-khmara-pudrovo-rozhevyi"
+    }
+   ],
+   "outfitWith": [
+    "spidnytsia-midi-plise-khvylia-pudrovyi",
+    "shtany-palatstso-flou-bezhevyi"
+   ],
+   "rating": {
+    "value": 5,
+    "count": 2
+   },
+   "reviews": [
+    {
+     "author": "Вікторія",
+     "rating": 5,
+     "text": "М'якість неймовірна. Після трьох прань виглядає як новий.",
+     "date": "2026-03-08",
+     "id": "rev-dzhemper-kashemirovyi-khmara-blakytnyi-0",
+     "approved": true
+    },
+    {
+     "author": "Дарія",
+     "rating": 5,
+     "text": "Брала мамі в подарунок, тепер замовляю собі.",
+     "date": "2026-04-17",
+     "id": "rev-dzhemper-kashemirovyi-khmara-blakytnyi-1",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_kardyhan-vovnianyi-zatyshok-bezhevyi",
+   "slug": "kardyhan-vovnianyi-zatyshok-bezhevyi",
+   "title": "Кардиган вовняний «Затишок» — бежевий",
+   "brand": "ANKE",
+   "sku": "ANK-112-1",
+   "price": 299000,
+   "compareAtPrice": 349000,
+   "images": [
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Бежевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Бежевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Бежевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Бежевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бежевий",
+    "hex": "#DFD2BE"
+   },
+   "colorGroupId": "grp-kardyhan-vovnianyi-zatyshok",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "trykotazh"
+   ],
+   "material": "Вовна",
+   "description": "Об'ємний кардиган великої в'язки з накладними кишенями і ґудзиками з рогу. Працює як легке пальто в міжсезоння і як плед у подорожі.",
+   "materialFull": "Вовна 55%, акрил 45%",
+   "care": [
+    "Ручне прання при 30°C",
+    "Сушити горизонтально",
+    "Зберігати складеним"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Оливковий",
+     "hex": "#ABAF97",
+     "productSlug": "kardyhan-vovnianyi-zatyshok-olyvkovyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_kardyhan-vovnianyi-zatyshok-olyvkovyi",
+   "slug": "kardyhan-vovnianyi-zatyshok-olyvkovyi",
+   "title": "Кардиган вовняний «Затишок» — оливковий",
+   "brand": "ANKE",
+   "sku": "ANK-112-2",
+   "price": 299000,
+   "compareAtPrice": 349000,
+   "images": [
+    {
+     "url": "/demo/olive.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Оливковий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Оливковий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Оливковий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/olive.jpg",
+     "alt": "Кардиган вовняний «Затишок» — Оливковий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Оливковий",
+    "hex": "#ABAF97"
+   },
+   "colorGroupId": "grp-kardyhan-vovnianyi-zatyshok",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "trykotazh"
+   ],
+   "material": "Вовна",
+   "description": "Об'ємний кардиган великої в'язки з накладними кишенями і ґудзиками з рогу. Працює як легке пальто в міжсезоння і як плед у подорожі.",
+   "materialFull": "Вовна 55%, акрил 45%",
+   "care": [
+    "Ручне прання при 30°C",
+    "Сушити горизонтально",
+    "Зберігати складеним"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Бежевий",
+     "hex": "#DFD2BE",
+     "productSlug": "kardyhan-vovnianyi-zatyshok-bezhevyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_palto-vovniane-osin-bezhevyi",
+   "slug": "palto-vovniane-osin-bezhevyi",
+   "title": "Пальто вовняне «Осінь» — бежевий",
+   "brand": "ANKE",
+   "sku": "ANK-113-1",
+   "price": 689000,
+   "images": [
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Пальто вовняне «Осінь» — Бежевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Пальто вовняне «Осінь» — Бежевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Пальто вовняне «Осінь» — Бежевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Пальто вовняне «Осінь» — Бежевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бежевий",
+    "hex": "#DFD2BE"
+   },
+   "colorGroupId": "grp-palto-vovniane-osin",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "verkhniy-odyah"
+   ],
+   "material": "Вовна",
+   "description": "Однобортне пальто прямого крою з м'якої вовняної тканини з кашеміровим туше. Лацкани ручної обробки, глибокі кишені, шліца. Довжина нижче коліна — универсальна для будь-якого зросту.",
+   "materialFull": "Вовна 80%, поліамід 20%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Графітовий",
+     "hex": "#5C5C5C",
+     "productSlug": "palto-vovniane-osin-hrafitovyi"
+    }
+   ],
+   "outfitWith": [
+    "dzhemper-kashemirovyi-khmara-molochnyi",
+    "sumka-shkiriana-minimal-chornyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_palto-vovniane-osin-hrafitovyi",
+   "slug": "palto-vovniane-osin-hrafitovyi",
+   "title": "Пальто вовняне «Осінь» — графітовий",
+   "brand": "ANKE",
+   "sku": "ANK-113-2",
+   "price": 689000,
+   "images": [
+    {
+     "url": "/demo/graphite.jpg",
+     "alt": "Пальто вовняне «Осінь» — Графітовий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Пальто вовняне «Осінь» — Графітовий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Пальто вовняне «Осінь» — Графітовий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/graphite.jpg",
+     "alt": "Пальто вовняне «Осінь» — Графітовий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Графітовий",
+    "hex": "#5C5C5C"
+   },
+   "colorGroupId": "grp-palto-vovniane-osin",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "odyah",
+    "verkhniy-odyah"
+   ],
+   "material": "Вовна",
+   "description": "Однобортне пальто прямого крою з м'якої вовняної тканини з кашеміровим туше. Лацкани ручної обробки, глибокі кишені, шліца. Довжина нижче коліна — универсальна для будь-якого зросту.",
+   "materialFull": "Вовна 80%, поліамід 20%",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [
+    {
+     "name": "Бежевий",
+     "hex": "#DFD2BE",
+     "productSlug": "palto-vovniane-osin-bezhevyi"
+    }
+   ],
+   "outfitWith": [
+    "dzhemper-kashemirovyi-khmara-molochnyi",
+    "sumka-shkiriana-minimal-chornyi"
+   ],
+   "reviews": []
+  },
+  {
+   "id": "prod_trench-klasychnyi-london-bezhevyi",
+   "slug": "trench-klasychnyi-london-bezhevyi",
+   "title": "Тренч класичний «Лондон» — бежевий",
+   "brand": "ANKE",
+   "sku": "ANK-114-1",
+   "price": 559000,
+   "images": [
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Тренч класичний «Лондон» — Бежевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Тренч класичний «Лондон» — Бежевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Тренч класичний «Лондон» — Бежевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Тренч класичний «Лондон» — Бежевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бежевий",
+    "hex": "#DFD2BE"
+   },
+   "colorGroupId": "grp-trench-klasychnyi-london",
+   "sizes": [
+    {
+     "size": "XS",
+     "inStock": true
+    },
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "odyah",
+    "verkhniy-odyah"
+   ],
+   "material": "Бавовна",
+   "description": "Двобортний тренч з усіма канонічними деталями: погони, шторм-клапан, пояс з пряжкою, розріз зі шліцею. Щільна бавовна з просоченням тримає мряку і вітер.",
+   "materialFull": "Бавовна 65%, поліестер 35%, водовідштовхувальне просочення",
+   "care": [
+    "Тільки хімчистка",
+    "Не прати",
+    "Зберігати на плічках"
+   ],
+   "madeIn": "Україна",
+   "modelParams": "Параметри моделі: зріст 175 см, на моделі розмір S",
+   "colors": [],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_bosonizhky-shkiriani-miia-bezhevyi",
+   "slug": "bosonizhky-shkiriani-miia-bezhevyi",
+   "title": "Босоніжки шкіряні «Мія» — бежевий",
+   "brand": "ANKE",
+   "sku": "ANK-115-1",
+   "price": 279000,
+   "images": [
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Бежевий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Бежевий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Бежевий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Бежевий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Бежевий",
+    "hex": "#DFD2BE"
+   },
+   "colorGroupId": "grp-bosonizhky-shkiriani-miia",
+   "sizes": [
+    {
+     "size": "36",
+     "inStock": false
+    },
+    {
+     "size": "37",
+     "inStock": true
+    },
+    {
+     "size": "38",
+     "inStock": true
+    },
+    {
+     "size": "39",
+     "inStock": true
+    },
+    {
+     "size": "40",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "vzuttya"
+   ],
+   "material": "Шкіра",
+   "description": "Босоніжки на стійких підборах 5 см з м'якими шкіряними ремінцями. Колодка перевірена сотнями кілометрів міста — не натирають з першого дня.",
+   "materialFull": "Натуральна шкіра, підкладка — шкіра, підошва — TR",
+   "care": [
+    "Протирати м'якою сухою тканиною",
+    "Уникати тривалого контакту з водою",
+    "Зберігати в пилозахисному мішку"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "bosonizhky-shkiriani-miia-chornyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_bosonizhky-shkiriani-miia-chornyi",
+   "slug": "bosonizhky-shkiriani-miia-chornyi",
+   "title": "Босоніжки шкіряні «Мія» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-115-2",
+   "price": 279000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Босоніжки шкіряні «Мія» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-bosonizhky-shkiriani-miia",
+   "sizes": [
+    {
+     "size": "36",
+     "inStock": true
+    },
+    {
+     "size": "37",
+     "inStock": true
+    },
+    {
+     "size": "38",
+     "inStock": true
+    },
+    {
+     "size": "39",
+     "inStock": true
+    },
+    {
+     "size": "40",
+     "inStock": false
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "vzuttya"
+   ],
+   "material": "Шкіра",
+   "description": "Босоніжки на стійких підборах 5 см з м'якими шкіряними ремінцями. Колодка перевірена сотнями кілометрів міста — не натирають з першого дня.",
+   "materialFull": "Натуральна шкіра, підкладка — шкіра, підошва — TR",
+   "care": [
+    "Протирати м'якою сухою тканиною",
+    "Уникати тривалого контакту з водою",
+    "Зберігати в пилозахисному мішку"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Бежевий",
+     "hex": "#DFD2BE",
+     "productSlug": "bosonizhky-shkiriani-miia-bezhevyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_baletky-shkiriani-hratsiia-chornyi",
+   "slug": "baletky-shkiriani-hratsiia-chornyi",
+   "title": "Балетки шкіряні «Грація» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-116-1",
+   "price": 239000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Балетки шкіряні «Грація» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Балетки шкіряні «Грація» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Балетки шкіряні «Грація» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Балетки шкіряні «Грація» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-baletky-shkiriani-hratsiia",
+   "sizes": [
+    {
+     "size": "36",
+     "inStock": true
+    },
+    {
+     "size": "37",
+     "inStock": true
+    },
+    {
+     "size": "38",
+     "inStock": true
+    },
+    {
+     "size": "39",
+     "inStock": true
+    },
+    {
+     "size": "40",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "vzuttya"
+   ],
+   "material": "Шкіра",
+   "description": "Класичні балетки з квадратним носом з м'якої наппи. Гнучка підошва, непомітна гумка по канту — сидять щільно без тиску.",
+   "materialFull": "Натуральна шкіра, устілка — шкіра",
+   "care": [
+    "Протирати м'якою сухою тканиною",
+    "Уникати тривалого контакту з водою",
+    "Зберігати в пилозахисному мішку"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Пудровий",
+     "hex": "#EAD2DB",
+     "productSlug": "baletky-shkiriani-hratsiia-pudrovyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_baletky-shkiriani-hratsiia-pudrovyi",
+   "slug": "baletky-shkiriani-hratsiia-pudrovyi",
+   "title": "Балетки шкіряні «Грація» — пудровий",
+   "brand": "ANKE",
+   "sku": "ANK-116-2",
+   "price": 239000,
+   "images": [
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Балетки шкіряні «Грація» — Пудровий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Балетки шкіряні «Грація» — Пудровий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Балетки шкіряні «Грація» — Пудровий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Балетки шкіряні «Грація» — Пудровий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Пудровий",
+    "hex": "#EAD2DB"
+   },
+   "colorGroupId": "grp-baletky-shkiriani-hratsiia",
+   "sizes": [
+    {
+     "size": "36",
+     "inStock": true
+    },
+    {
+     "size": "37",
+     "inStock": true
+    },
+    {
+     "size": "38",
+     "inStock": true
+    },
+    {
+     "size": "39",
+     "inStock": true
+    },
+    {
+     "size": "40",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "vzuttya"
+   ],
+   "material": "Шкіра",
+   "description": "Класичні балетки з квадратним носом з м'якої наппи. Гнучка підошва, непомітна гумка по канту — сидять щільно без тиску.",
+   "materialFull": "Натуральна шкіра, устілка — шкіра",
+   "care": [
+    "Протирати м'якою сухою тканиною",
+    "Уникати тривалого контакту з водою",
+    "Зберігати в пилозахисному мішку"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "baletky-shkiriani-hratsiia-chornyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_sumka-shkiriana-minimal-chornyi",
+   "slug": "sumka-shkiriana-minimal-chornyi",
+   "title": "Сумка шкіряна «Мінімал» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-117-1",
+   "price": 349000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-sumka-shkiriana-minimal",
+   "sizes": [
+    {
+     "size": "One size",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "aksesuary",
+    "sumky"
+   ],
+   "material": "Шкіра",
+   "description": "Сумка-тоут з гладкої шкіри без зайвих деталей: одна секція, внутрішня кишеня на блискавці, магнітна застібка. Вміщує ноутбук 13″.",
+   "materialFull": "Натуральна шкіра, фурнітура з покриттям під золото",
+   "care": [
+    "Протирати м'якою сухою тканиною",
+    "Уникати тривалого контакту з водою",
+    "Зберігати в пилозахисному мішку"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Теракотовий",
+     "hex": "#CD9878",
+     "productSlug": "sumka-shkiriana-minimal-terakotovyi"
+    }
+   ],
+   "outfitWith": [],
+   "rating": {
+    "value": 5,
+    "count": 1
+   },
+   "reviews": [
+    {
+     "author": "Оксана",
+     "rating": 5,
+     "text": "Шкіра щільна, тримає форму. Фурнітура не темніє.",
+     "date": "2026-05-05",
+     "id": "rev-sumka-shkiriana-minimal-chornyi-0",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_sumka-shkiriana-minimal-terakotovyi",
+   "slug": "sumka-shkiriana-minimal-terakotovyi",
+   "title": "Сумка шкіряна «Мінімал» — теракотовий",
+   "brand": "ANKE",
+   "sku": "ANK-117-2",
+   "price": 349000,
+   "images": [
+    {
+     "url": "/demo/terracotta.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Теракотовий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Теракотовий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Теракотовий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/terracotta.jpg",
+     "alt": "Сумка шкіряна «Мінімал» — Теракотовий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Теракотовий",
+    "hex": "#CD9878"
+   },
+   "colorGroupId": "grp-sumka-shkiriana-minimal",
+   "sizes": [
+    {
+     "size": "One size",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "aksesuary",
+    "sumky"
+   ],
+   "material": "Шкіра",
+   "description": "Сумка-тоут з гладкої шкіри без зайвих деталей: одна секція, внутрішня кишеня на блискавці, магнітна застібка. Вміщує ноутбук 13″.",
+   "materialFull": "Натуральна шкіра, фурнітура з покриттям під золото",
+   "care": [
+    "Протирати м'якою сухою тканиною",
+    "Уникати тривалого контакту з водою",
+    "Зберігати в пилозахисному мішку"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Чорний",
+     "hex": "#1F1F1F",
+     "productSlug": "sumka-shkiriana-minimal-chornyi"
+    }
+   ],
+   "outfitWith": [],
+   "rating": {
+    "value": 5,
+    "count": 1
+   },
+   "reviews": [
+    {
+     "author": "Оксана",
+     "rating": 5,
+     "text": "Шкіра щільна, тримає форму. Фурнітура не темніє.",
+     "date": "2026-05-05",
+     "id": "rev-sumka-shkiriana-minimal-terakotovyi-0",
+     "approved": true
+    }
+   ]
+  },
+  {
+   "id": "prod_remin-shkirianyi-tonkyi-chornyi",
+   "slug": "remin-shkirianyi-tonkyi-chornyi",
+   "title": "Ремінь шкіряний «Тонкий» — чорний",
+   "brand": "ANKE",
+   "sku": "ANK-118-1",
+   "price": 89000,
+   "images": [
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Ремінь шкіряний «Тонкий» — Чорний — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Ремінь шкіряний «Тонкий» — Чорний — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Ремінь шкіряний «Тонкий» — Чорний — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/black.jpg",
+     "alt": "Ремінь шкіряний «Тонкий» — Чорний — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Чорний",
+    "hex": "#1F1F1F"
+   },
+   "colorGroupId": "grp-remin-shkirianyi-tonkyi",
+   "sizes": [
+    {
+     "size": "S",
+     "inStock": true
+    },
+    {
+     "size": "M",
+     "inStock": true
+    },
+    {
+     "size": "L",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "aksesuary",
+    "remeni"
+   ],
+   "material": "Шкіра",
+   "description": "Вузький ремінь 1,5 см з латунною пряжкою. Той самый штрих, що збирає сукню або оверсайз-сорочку в силует.",
+   "materialFull": "Натуральна шкіра рослинного дублення",
+   "care": [
+    "Протирати м'якою сухою тканиною",
+    "Уникати тривалого контакту з водою",
+    "Зберігати в пилозахисному мішку"
+   ],
+   "madeIn": "Україна",
+   "colors": [],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_khustka-shovkova-polit-pudrovyi",
+   "slug": "khustka-shovkova-polit-pudrovyi",
+   "title": "Хустка шовкова «Політ» — пудровий",
+   "brand": "ANKE",
+   "sku": "ANK-119-1",
+   "price": 129000,
+   "images": [
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Хустка шовкова «Політ» — Пудровий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Хустка шовкова «Політ» — Пудровий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Хустка шовкова «Політ» — Пудровий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/powder.jpg",
+     "alt": "Хустка шовкова «Політ» — Пудровий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Пудровий",
+    "hex": "#EAD2DB"
+   },
+   "colorGroupId": "grp-khustka-shovkova-polit",
+   "sizes": [
+    {
+     "size": "One size",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "aksesuary",
+    "khustky"
+   ],
+   "material": "Шовк",
+   "description": "Шовкова хустка 70×70 см з авторським принтом. Носіть на шиї, у волоссі або на ручці сумки — тримає колір і шовковистість роками.",
+   "materialFull": "Шовк 100%, ручна обробка краю",
+   "care": [
+    "Тільки хімчистка",
+    "Прасувати через тканину"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Смарагдовий",
+     "hex": "#6F927F",
+     "productSlug": "khustka-shovkova-polit-smarahdovyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_khustka-shovkova-polit-smarahdovyi",
+   "slug": "khustka-shovkova-polit-smarahdovyi",
+   "title": "Хустка шовкова «Політ» — смарагдовий",
+   "brand": "ANKE",
+   "sku": "ANK-119-2",
+   "price": 129000,
+   "images": [
+    {
+     "url": "/demo/emerald.jpg",
+     "alt": "Хустка шовкова «Політ» — Смарагдовий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Хустка шовкова «Політ» — Смарагдовий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Хустка шовкова «Політ» — Смарагдовий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/emerald.jpg",
+     "alt": "Хустка шовкова «Політ» — Смарагдовий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Смарагдовий",
+    "hex": "#6F927F"
+   },
+   "colorGroupId": "grp-khustka-shovkova-polit",
+   "sizes": [
+    {
+     "size": "One size",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "aksesuary",
+    "khustky"
+   ],
+   "material": "Шовк",
+   "description": "Шовкова хустка 70×70 см з авторським принтом. Носіть на шиї, у волоссі або на ручці сумки — тримає колір і шовковистість роками.",
+   "materialFull": "Шовк 100%, ручна обробка краю",
+   "care": [
+    "Тільки хімчистка",
+    "Прасувати через тканину"
+   ],
+   "madeIn": "Україна",
+   "colors": [
+    {
+     "name": "Пудровий",
+     "hex": "#EAD2DB",
+     "productSlug": "khustka-shovkova-polit-pudrovyi"
+    }
+   ],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_serezhky-kraplia-zolotystyi",
+   "slug": "serezhky-kraplia-zolotystyi",
+   "title": "Сережки «Крапля» — золотистий",
+   "brand": "ANKE",
+   "sku": "ANK-120-1",
+   "price": 99000,
+   "images": [
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сережки «Крапля» — Золотистий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сережки «Крапля» — Золотистий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Сережки «Крапля» — Золотистий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Сережки «Крапля» — Золотистий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Золотистий",
+    "hex": "#F3EEE5"
+   },
+   "colorGroupId": "grp-serezhky-kraplia",
+   "sizes": [
+    {
+     "size": "One size",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": false,
+   "categoryPath": [
+    "prykrasy"
+   ],
+   "material": "Латунь",
+   "description": "Витончені сережки-краплі з позолотою. Легкі — вуха не втомлюються навіть за цілий день.",
+   "materialFull": "Латунь з позолотою 18К, гіпоалергенні швензи",
+   "care": [
+    "Зберігати в сухому місці",
+    "Уникати контакту з парфумами"
+   ],
+   "madeIn": "Україна",
+   "colors": [],
+   "outfitWith": [],
+   "reviews": []
+  },
+  {
+   "id": "prod_kolie-liniia-zolotystyi",
+   "slug": "kolie-liniia-zolotystyi",
+   "title": "Кольє «Лінія» — золотистий",
+   "brand": "ANKE",
+   "sku": "ANK-121-1",
+   "price": 119000,
+   "images": [
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Кольє «Лінія» — Золотистий — ANKE",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Кольє «Лінія» — Золотистий — ANKE — деталь",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/beige.jpg",
+     "alt": "Кольє «Лінія» — Золотистий — ANKE — фактура",
+     "width": 1200,
+     "height": 1600
+    },
+    {
+     "url": "/demo/milk.jpg",
+     "alt": "Кольє «Лінія» — Золотистий — ANKE — вигляд ззаду",
+     "width": 1200,
+     "height": 1600
+    }
+   ],
+   "color": {
+    "name": "Золотистий",
+    "hex": "#F3EEE5"
+   },
+   "colorGroupId": "grp-kolie-liniia",
+   "sizes": [
+    {
+     "size": "One size",
+     "inStock": true
+    }
+   ],
+   "inStock": true,
+   "isNew": true,
+   "categoryPath": [
+    "prykrasy"
+   ],
+   "material": "Латунь",
+   "description": "Тонке кольє-ланцюжок з мініатюрною підвіскою-планкою. Носиться соло або в багатошаровості з іншими прикрасами.",
+   "materialFull": "Латунь з позолотою 18К",
+   "care": [
+    "Зберігати в сухому місці",
+    "Уникати контакту з водою"
+   ],
+   "madeIn": "Україна",
+   "colors": [],
+   "outfitWith": [],
+   "reviews": []
+  }
+ ]
+}

@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Підпроєкт Medusa має власний ESLint (turbo lint усередині medusa/)
+    "medusa/**",
   ]),
 ]);
 

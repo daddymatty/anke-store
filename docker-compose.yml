@@ -1,0 +1,62 @@
+# ANKE — продакшн-інфраструктура (VPS у ЄС / локальний повний стенд)
+# Фронт (Next.js) можна деплоїти на Vercel — тоді запускаються лише postgres + medusa.
+#
+#   docker compose up -d postgres          # тільки БД (локальна розробка)
+#   docker compose up -d postgres medusa   # БД + бекенд
+#   docker compose up -d                   # повний стенд
+#
+# Перед першим запуском:
+#   docker compose exec medusa npx medusa db:migrate
+#   docker compose exec medusa npx medusa exec ./src/scripts/seed-anke.ts
+#   docker compose exec medusa npx medusa user -e <email> -p <пароль>
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: medusa
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-medusa}
+      POSTGRES_DB: anke_medusa
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medusa -d anke_medusa"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  medusa:
+    build:
+      context: ./medusa
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://medusa:${POSTGRES_PASSWORD:-medusa}@postgres:5432/anke_medusa
+      JWT_SECRET: ${JWT_SECRET:?задай у .env}
+      COOKIE_SECRET: ${COOKIE_SECRET:?задай у .env}
+      STORE_CORS: ${STORE_CORS:-http://localhost:3000}
+      ADMIN_CORS: ${ADMIN_CORS:-http://localhost:9000}
+      AUTH_CORS: ${AUTH_CORS:-http://localhost:9000,http://localhost:3000}
+    ports:
+      - "9000:9000"
+
+  storefront:
+    build:
+      context: .
+      dockerfile: Dockerfile.storefront
+    restart: unless-stopped
+    depends_on:
+      - medusa
+    environment:
+      NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://anke-store.example}
+      MEDUSA_BACKEND_URL: http://medusa:9000
+      MEDUSA_PUBLISHABLE_KEY: ${MEDUSA_PUBLISHABLE_KEY:?задай у .env}
+    ports:
+      - "3000:3000"
+
+volumes:
+  pgdata:

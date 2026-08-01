@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { ProductCard } from "@/components/shop/ProductCard";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { catalog } from "@/lib/catalog";
 import { NAV } from "@/lib/site";
 
 /**
@@ -8,7 +10,8 @@ import { NAV } from "@/lib/site";
  * Hero з реальним фото, банери з адмінки, добірки товарів і motion-шар
  * додаються на Етапах 4, 10 і 12.
  */
-export default function Home() {
+export default async function Home() {
+  const newArrivals = await catalog.getNewArrivals(8);
   return (
     <>
       {/* Hero */}
@@ -32,6 +35,30 @@ export default function Home() {
               Каталог
             </ButtonLink>
           </div>
+        </Container>
+      </section>
+
+      {/* Новинки */}
+      <section aria-labelledby="home-new">
+        <Container className="pt-16">
+          <div className="flex items-end justify-between">
+            <h2 id="home-new" className="font-display text-display-sm font-light">
+              Новинки
+            </h2>
+            <Link
+              href="/novynky"
+              className="text-[12px] uppercase tracking-[0.14em] text-muted transition-colors hover:text-ink"
+            >
+              Дивитись усі
+            </Link>
+          </div>
+          <ul className="mt-8 grid grid-cols-2 gap-x-3 gap-y-8 md:grid-cols-4">
+            {newArrivals.map((p, i) => (
+              <li key={p.id}>
+                <ProductCard product={p} priority={i < 2} />
+              </li>
+            ))}
+          </ul>
         </Container>
       </section>
 
