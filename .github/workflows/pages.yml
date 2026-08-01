@@ -1,0 +1,63 @@
+# Демо-вітрина ANKE на GitHub Pages.
+# Знімок робиться краулером справжнього сервера (tools/snapshot.mjs):
+# статичний експорт Next неможливий через Server Actions (кошик/checkout).
+name: Deploy preview to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      SNAPSHOT: "1"
+      NEXT_PUBLIC_BASE_PATH: /anke-store
+      NEXT_PUBLIC_SITE_URL: https://daddymatty.github.io/anke-store
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Start server
+        run: |
+          npm run start -- -p 3000 &
+          npx wait-on http://127.0.0.1:3000/anke-store/odyah --timeout 60000
+
+      - name: Snapshot
+        run: node tools/snapshot.mjs
+        env:
+          SNAPSHOT_ORIGIN: http://127.0.0.1:3000
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
