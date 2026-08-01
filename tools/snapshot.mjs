@@ -6,9 +6,13 @@
  * Тому ми піднімаємо справжній сервер і зберігаємо готовий HTML — вітрина
  * (головна, категорії, картки, блог, контент) виглядає і клікається як у продакшні.
  *
+ * ВАЖЛИВО про структуру: GitHub Pages сам обслуговує артефакт за адресою
+ * https://<user>.github.io/<repo>/ — тобто корінь артефакту вже дорівнює basePath.
+ * Тому файли кладемо ПЛОСКО в OUT (без теки basePath), інакше вийде /repo/repo/.
+ *
  * Запуск (сервер має бути піднятий з тим самим NEXT_PUBLIC_BASE_PATH):
  *   node tools/snapshot.mjs
- * Env: SNAPSHOT_ORIGIN (default http://127.0.0.1:3000), BASE_PATH, OUT_DIR
+ * Env: SNAPSHOT_ORIGIN (default http://127.0.0.1:3000), NEXT_PUBLIC_BASE_PATH, OUT_DIR
  */
 import { cp, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
@@ -17,7 +21,6 @@ const ORIGIN = process.env.SNAPSHOT_ORIGIN ?? "http://127.0.0.1:3000";
 const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 const OUT = process.env.OUT_DIR ?? "_site";
 
-/** Сторінки, які без сервера не працюють — у знімок не потрапляють */
 // checkout і «Дякуємо» вимагають сервера (Server Actions, замовлення);
 // вішліст і кабінет у знімок потрапляють у порожньому стані — для демо цього досить
 const SKIP = [/^\/checkout/, /^\/dyakuyemo/, /^\/poshuk/, /^\/api\//];
@@ -27,6 +30,18 @@ const strip = (p) => (BASE_PATH && p.startsWith(BASE_PATH) ? p.slice(BASE_PATH.l
 async function get(routePath) {
   const res = await fetch(`${ORIGIN}${BASE_PATH}${routePath === "/" ? "/" : routePath}`);
   return { status: res.status, body: res.ok ? await res.text() : "" };
+}
+
+/**
+ * next/image у режимі unoptimized віддає src як є (`/demo/...`) — без basePath.
+ * На Pages такий шлях веде на корінь домену, де нічого немає. Тому дописуємо basePath.
+ */
+function fixAssetPaths(html) {
+  if (!BASE_PATH) return html;
+  return html
+    .replaceAll('"/demo/', `"${BASE_PATH}/demo/`)
+    .replaceAll("(/demo/", `(${BASE_PATH}/demo/`)
+    .replaceAll(" /demo/", ` ${BASE_PATH}/demo/`);
 }
 
 /** Стартовий набір: sitemap-и + службові сторінки без sitemap */
@@ -58,9 +73,9 @@ while (queue.length) {
     continue;
   }
 
-  const dir = path.join(OUT, BASE_PATH.replace(/^\//, ""), routePath.replace(/^\//, ""));
+  const dir = path.join(OUT, routePath.replace(/^\//, ""));
   await mkdir(dir, { recursive: true });
-  await writeFile(path.join(dir, "index.html"), body);
+  await writeFile(path.join(dir, "index.html"), fixAssetPaths(body));
   saved.push(routePath);
 
   // Обхід внутрішніх посилань (щоб не проґавити сторінки поза sitemap)
@@ -77,34 +92,30 @@ while (queue.length) {
   }
 }
 
-// Статика: JS/CSS-чанки і public/
-const root = path.join(OUT, BASE_PATH.replace(/^\//, ""));
-await cp(".next/static", path.join(root, "_next/static"), { recursive: true });
-await cp("public", root, { recursive: true, force: true });
-// next/image в режимі unoptimized не додає basePath до src (/demo/...),
-// тому дублюємо public у корінь знімка
-if (BASE_PATH) await cp("public", OUT, { recursive: true, force: true });
+// Статика: JS/CSS-чанки і public/ — у корінь артефакту
+await cp(".next/static", path.join(OUT, "_next/static"), { recursive: true });
+await cp("public", OUT, { recursive: true, force: true });
 
 // Іконки з app/ (icon.png, apple-icon.png) — генеруються Next, не лежать у public
 for (const asset of ["/icon.png", "/apple-icon.png"]) {
   const res = await fetch(`${ORIGIN}${BASE_PATH}${asset}`);
   if (res.ok) {
-    await writeFile(path.join(root, asset.slice(1)), Buffer.from(await res.arrayBuffer()));
+    await writeFile(path.join(OUT, asset.slice(1)), Buffer.from(await res.arrayBuffer()));
   }
 }
 
-// robots.txt і sitemap-и знімка
+// Sitemap-и знімка
 for (const i of [0, 1, 2, 3]) {
   const { body } = await get(`/sitemap/${i}.xml`);
-  await writeFile(path.join(root, `sitemap-${i}.xml`), body);
+  await writeFile(path.join(OUT, `sitemap-${i}.xml`), body);
 }
 // Демо-вітрина не має індексуватись, щоб не конкурувати з майбутнім доменом
-await writeFile(path.join(root, "robots.txt"), "User-agent: *\nDisallow: /\n");
+await writeFile(path.join(OUT, "robots.txt"), "User-agent: *\nDisallow: /\n");
 // Вимикає обробку Jekyll на GitHub Pages (інакше теки _next ігноруються)
 await writeFile(path.join(OUT, ".nojekyll"), "");
 
 // 404 для GitHub Pages
 const { body: notFound } = await get("/nemaje-takoji-storinky-404");
-if (notFound) await writeFile(path.join(root, "404.html"), notFound);
+if (notFound) await writeFile(path.join(OUT, "404.html"), fixAssetPaths(notFound));
 
-console.log(`✓ Знімок готовий: ${saved.length} сторінок → ${OUT}${BASE_PATH}`);
+console.log(`✓ Знімок готовий: ${saved.length} сторінок → ${OUT}/ (обслуговується як ${BASE_PATH || "/"})`);
