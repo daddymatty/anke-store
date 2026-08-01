@@ -1,9 +1,14 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { CartDrawer } from "@/components/shop/CartDrawer";
+
+// Важкі оверлеї не входять у перший бандл — довантажуються при першому відкритті
+const CartDrawer = dynamic(() => import("@/components/shop/CartDrawer").then((m) => m.CartDrawer), { ssr: false });
+const SearchOverlayLazy = dynamic(() => import("./SearchOverlay").then((m) => m.SearchOverlay), { ssr: false });
+const MobileMenuLazy = dynamic(() => import("./MobileMenu").then((m) => m.MobileMenu), { ssr: false });
 import { Logo } from "@/components/ui/Logo";
 import { IconBag, IconHeart, IconMenu, IconSearch, IconUser } from "@/components/ui/icons";
 import {
@@ -15,8 +20,6 @@ import {
 import type { NavEntry } from "@/lib/nav";
 import { SITE } from "@/lib/site";
 import { MegaMenu } from "./MegaMenu";
-import { MobileMenu } from "./MobileMenu";
-import { SearchOverlay } from "./SearchOverlay";
 
 /**
  * Sticky-хедер: стискається на скролі, мегаменю по hover/focus,
@@ -29,6 +32,10 @@ export function Header({ nav }: { nav: NavEntry[] }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [megaFor, setMegaFor] = useState<string | null>(null);
+  // Прапорці «хоч раз відкривали» — щоб чанк оверлея не тягнувся до взаємодії
+  const [everCart, setEverCart] = useState(false);
+  const [everSearch, setEverSearch] = useState(false);
+  const [everMenu, setEverMenu] = useState(false);
   const count = cartCount(
     useSyncExternalStore(subscribeCart, getCartSnapshot, getCartServerSnapshot),
   );
@@ -37,7 +44,10 @@ export function Header({ nav }: { nav: NavEntry[] }) {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    const onOpenCart = () => setCartOpen(true);
+    const onOpenCart = () => {
+      setEverCart(true);
+      setCartOpen(true);
+    };
     window.addEventListener("anke:open-cart", onOpenCart);
     return () => {
       window.removeEventListener("scroll", onScroll);
@@ -62,7 +72,10 @@ export function Header({ nav }: { nav: NavEntry[] }) {
           className="-ml-2 p-2 lg:hidden"
           aria-label="Відкрити меню"
           aria-expanded={menuOpen}
-          onClick={() => setMenuOpen(true)}
+          onClick={() => {
+            setEverMenu(true);
+            setMenuOpen(true);
+          }}
         >
           <IconMenu className="h-6 w-6" />
         </button>
@@ -107,7 +120,15 @@ export function Header({ nav }: { nav: NavEntry[] }) {
 
         {/* Дії */}
         <div className="flex items-center justify-end gap-1 md:gap-2">
-          <button type="button" className="p-2" aria-label="Пошук" onClick={() => setSearchOpen(true)}>
+          <button
+            type="button"
+            className="p-2"
+            aria-label="Пошук"
+            onClick={() => {
+              setEverSearch(true);
+              setSearchOpen(true);
+            }}
+          >
             <IconSearch className="h-[22px] w-[22px]" />
           </button>
           <Link href="/kabinet" className="hidden p-2 md:block" aria-label="Особистий кабінет">
@@ -120,7 +141,10 @@ export function Header({ nav }: { nav: NavEntry[] }) {
             type="button"
             className="relative p-2"
             aria-label={count > 0 ? `Кошик, ${count} тов.` : "Кошик"}
-            onClick={() => setCartOpen(true)}
+            onClick={() => {
+              setEverCart(true);
+              setCartOpen(true);
+            }}
           >
             <IconBag className="h-[22px] w-[22px]" />
             <AnimatePresence>
@@ -150,13 +174,15 @@ export function Header({ nav }: { nav: NavEntry[] }) {
         />
       </div>
 
-      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} nav={nav} />
-      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
-      <CartDrawer
-        open={cartOpen}
-        onClose={() => setCartOpen(false)}
-        freeShippingFrom={SITE.freeShippingFrom * 100}
-      />
+      {everMenu && <MobileMenuLazy open={menuOpen} onClose={() => setMenuOpen(false)} nav={nav} />}
+      {everSearch && <SearchOverlayLazy open={searchOpen} onClose={() => setSearchOpen(false)} />}
+      {everCart && (
+        <CartDrawer
+          open={cartOpen}
+          onClose={() => setCartOpen(false)}
+          freeShippingFrom={SITE.freeShippingFrom * 100}
+        />
+      )}
     </header>
   );
 }
