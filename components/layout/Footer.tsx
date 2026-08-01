@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { Logo } from "@/components/ui/Logo";
 import { FOOTER_LINKS, SITE } from "@/lib/site";
+import { FooterNewsletter } from "./FooterNewsletter";
 
 export function Footer() {
   return (
@@ -12,6 +13,7 @@ export function Footer() {
           <div className="lg:col-span-2">
             <Logo variant="full" className="h-14 text-ink" />
             <p className="mt-5 max-w-xs text-[13px] leading-relaxed text-muted">{SITE.description}</p>
+            <FooterNewsletter />
           </div>
 
           <FooterCol title="Каталог" links={FOOTER_LINKS.shop} />
