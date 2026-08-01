@@ -3,9 +3,11 @@ import { applyFilters, applySort, buildFacets } from "./local";
 import type {
   CategoryNode,
   ListProductsOptions,
+  PageSeo,
   Product,
   ProductCard,
   ProductListResult,
+  ProductReview,
 } from "./types";
 
 /**
@@ -36,7 +38,20 @@ type MedusaCategory = {
   handle: string;
   description: string | null;
   parent_category_id: string | null;
+  metadata: Record<string, unknown> | null;
 };
+
+/** metadata → SEO-перевизначення (ключі: seoTitle, seoDescription, ogImage, canonical, noindex) */
+function seoFromMeta(meta: Record<string, unknown> | null | undefined): PageSeo | undefined {
+  if (!meta) return undefined;
+  const seo: PageSeo = {};
+  if (typeof meta.seoTitle === "string" && meta.seoTitle) seo.title = meta.seoTitle;
+  if (typeof meta.seoDescription === "string" && meta.seoDescription) seo.description = meta.seoDescription;
+  if (typeof meta.ogImage === "string" && meta.ogImage) seo.ogImage = meta.ogImage;
+  if (typeof meta.canonical === "string" && meta.canonical) seo.canonical = meta.canonical;
+  if (meta.noindex === true || meta.noindex === "true" || meta.noindex === "1") seo.noindex = true;
+  return Object.keys(seo).length ? seo : undefined;
+}
 type MedusaProduct = {
   id: string;
   title: string;
@@ -90,7 +105,7 @@ export class MedusaProvider implements CatalogProvider {
 
   private async loadCategories(): Promise<{ tree: CategoryNode[]; byId: Map<string, CategoryNode> }> {
     const data = await this.fetchJson<{ product_categories: MedusaCategory[] }>(
-      "/store/product-categories?limit=200&fields=id,name,handle,description,parent_category_id",
+      "/store/product-categories?limit=200&fields=id,name,handle,description,parent_category_id,metadata",
       { revalidate: CATEGORY_REVALIDATE, tags: ["categories"] },
     );
     const byId = new Map<string, CategoryNode>();
@@ -98,6 +113,7 @@ export class MedusaProvider implements CatalogProvider {
     for (const rc of raw) {
       byId.set(rc.id, {
         id: rc.id,
+        seo: seoFromMeta(rc.metadata),
         // handle верхніх рівнів = slug; вкладені мають складений handle (odyah-sukni),
         // беремо останній сегмент як slug
         slug: rc.handle.split("-").length > 1 && raw.some((x) => x.id === rc.parent_category_id)
@@ -106,6 +122,7 @@ export class MedusaProvider implements CatalogProvider {
         path: [],
         title: rc.name,
         description: rc.description ?? undefined,
+        seoText: typeof rc.metadata?.seoText === "string" ? (rc.metadata.seoText as string) : undefined,
         children: [],
       });
     }
@@ -194,7 +211,28 @@ export class MedusaProvider implements CatalogProvider {
       outfitWith: Array.isArray(meta.outfitWith) ? (meta.outfitWith as string[]) : [],
       rating: undefined,
       reviews: [],
+      seo: seoFromMeta(meta),
     };
+  }
+
+  /** Схвалені відгуки з модуля anke-content */
+  private async fetchReviews(handle: string): Promise<ProductReview[]> {
+    try {
+      const data = await this.fetchJson<{ reviews: { id: string; author: string; rating: number; text: string; date: string }[] }>(
+        `/store/anke/reviews?handle=${encodeURIComponent(handle)}`,
+        { revalidate: PRODUCT_REVALIDATE, tags: ["products", `reviews:${handle}`] },
+      );
+      return data.reviews.map((r) => ({
+        id: r.id,
+        author: r.author,
+        rating: Math.max(1, Math.min(5, Math.round(r.rating))) as ProductReview["rating"],
+        text: r.text,
+        date: r.date,
+        approved: true,
+      }));
+    } catch {
+      return [];
+    }
   }
 
   /** Повний набір товарів (кешується ISR на рівні fetch) */
@@ -262,7 +300,13 @@ export class MedusaProvider implements CatalogProvider {
 
   async getProduct(slug: string): Promise<Product | null> {
     const all = await this.allProducts();
-    return all.find((p) => p.slug === slug) ?? null;
+    const product = all.find((p) => p.slug === slug);
+    if (!product) return null;
+    const reviews = await this.fetchReviews(slug);
+    if (!reviews.length) return product;
+    const value =
+      Math.round((reviews.reduce((a, r) => a + r.rating, 0) / reviews.length) * 10) / 10;
+    return { ...product, reviews, rating: { value, count: reviews.length } };
   }
 
   async getAllProductSlugs(): Promise<string[]> {

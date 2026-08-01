@@ -34,12 +34,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const product = await catalog.getProduct(slug);
   if (!product) return {};
+  const alternates = pageAlternates(`/product/${product.slug}`);
   return {
-    title: `${product.title} — купити в Києві та Україні`,
-    description: `${product.title} за ${priceDecimal(product.price)} грн. ${product.materialFull}. Доставка Новою Поштою 1–3 дні, обмін і повернення 14 днів | ${SITE.name}`,
-    alternates: pageAlternates(`/product/${product.slug}`),
+    // SEO-поля з адмінки (metadata товару) мають пріоритет над шаблоном
+    title: product.seo?.title ?? `${product.title} — купити в Києві та Україні`,
+    description:
+      product.seo?.description ??
+      `${product.title} за ${priceDecimal(product.price)} грн. ${product.materialFull}. Доставка Новою Поштою 1–3 дні, обмін і повернення 14 днів | ${SITE.name}`,
+    alternates: product.seo?.canonical
+      ? { ...alternates, canonical: product.seo.canonical }
+      : alternates,
+    ...(product.seo?.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
-      images: product.images[0] ? [{ url: product.images[0].url, alt: product.images[0].alt }] : undefined,
+      images: product.seo?.ogImage
+        ? [{ url: product.seo.ogImage }]
+        : product.images[0]
+          ? [{ url: product.images[0].url, alt: product.images[0].alt }]
+          : undefined,
     },
   };
 }

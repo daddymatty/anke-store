@@ -7,6 +7,15 @@
 /** Гроші — завжди в копійках (integer), валюта UAH */
 export type Money = number;
 
+/** SEO-перевизначення сторінки (редагуються в metadata товару/категорії в адмінці) */
+export type PageSeo = {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  noindex?: boolean;
+};
+
 export type CategoryNode = {
   id: string;
   /** Сегмент URL: "sukni" */
@@ -17,6 +26,7 @@ export type CategoryNode = {
   description?: string;
   /** SEO-текст під лістингом (редагується в адмінці, 800–1500 знаків) */
   seoText?: string;
+  seo?: PageSeo;
   children: CategoryNode[];
 };
 
@@ -87,6 +97,7 @@ export type Product = ProductCard & {
   outfitWith: string[];
   rating?: { value: number; count: number };
   reviews: ProductReview[];
+  seo?: PageSeo;
 };
 
 export type SortKey = "new" | "price-asc" | "price-desc" | "popular";

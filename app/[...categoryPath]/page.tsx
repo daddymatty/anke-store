@@ -35,11 +35,16 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
   const sp = await searchParams;
   const category = await catalog.getCategoryByPath(categoryPath);
   if (!category) return {};
+  const base = catalogRobotsAndCanonical(`/${categoryPath.join("/")}`, sp);
   return {
-    title: `${category.title} — купити в Києві та Україні`,
+    title: category.seo?.title ?? `${category.title} — купити в Києві та Україні`,
     description:
-      category.description ?? `${category.title} від ${SITE.name}: доставка Новою Поштою по Україні.`,
-    ...catalogRobotsAndCanonical(`/${categoryPath.join("/")}`, sp),
+      category.seo?.description ??
+      category.description ??
+      `${category.title} від ${SITE.name}: доставка Новою Поштою по Україні.`,
+    ...base,
+    ...(category.seo?.noindex ? { robots: { index: false, follow: true } } : {}),
+    ...(category.seo?.ogImage ? { openGraph: { images: [{ url: category.seo.ogImage }] } } : {}),
   };
 }
 

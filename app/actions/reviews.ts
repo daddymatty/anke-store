@@ -26,7 +26,28 @@ export async function submitReview(input: {
   if (!parsed.success) {
     return { ok: false, error: parsed.error.issues[0]?.message ?? "Невірні дані" };
   }
-  // TODO(Етап 12): персист у кастомний модуль Medusa зі статусом "pending"
-  console.info("[review-submitted]", parsed.data);
+  const base = process.env.MEDUSA_BACKEND_URL?.replace(/\/$/, "");
+  const key = process.env.MEDUSA_PUBLISHABLE_KEY;
+  if (base && key) {
+    try {
+      const res = await fetch(`${base}/store/anke/reviews`, {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-publishable-api-key": key },
+        body: JSON.stringify({
+          handle: parsed.data.slug,
+          author: parsed.data.author,
+          rating: parsed.data.rating,
+          text: parsed.data.text,
+        }),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      return { ok: true };
+    } catch (e) {
+      console.error("[review-submit] medusa error:", e);
+      return { ok: false, error: "Не вдалося надіслати відгук — спробуйте пізніше" };
+    }
+  }
+  // Без Medusa (локальний режим) — лог
+  console.info("[review-submitted:dev]", parsed.data);
   return { ok: true };
 }
