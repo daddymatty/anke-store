@@ -98,6 +98,7 @@ export const FOOTER_LINKS = {
   ],
   brand: [
     { title: "Про бренд", href: "/pro-brend" },
+    { title: "Засновниця", href: "/zasnovnytsia" },
     { title: "Блог", href: "/blog" },
     { title: "Договір оферти", href: "/oferta" },
     { title: "Політика конфіденційності", href: "/konfidentsiynist" },

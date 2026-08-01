@@ -20,6 +20,8 @@ const STATIC_PATHS = [
   "/novynky",
   "/sale",
   "/pro-brend",
+  "/zasnovnytsia",
+  "/rozmirna-sitka",
   "/dostavka-oplata",
   "/povernennya",
   "/faq",

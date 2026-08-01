@@ -47,11 +47,14 @@ export default function AboutPage() {
             на обмін чи повернення без питань.
           </p>
         </div>
-        <div className="mt-10 flex gap-3">
-          <ButtonLink href="/novynky" variant="primary" size="lg">
+        <div className="mt-10 flex flex-wrap gap-3">
+          <ButtonLink href="/zasnovnytsia" variant="primary" size="lg">
+            Хто за цим стоїть
+          </ButtonLink>
+          <ButtonLink href="/novynky" variant="outline" size="lg">
             Нова колекція
           </ButtonLink>
-          <ButtonLink href="/kontakty" variant="outline" size="lg">
+          <ButtonLink href="/kontakty" variant="ghost" size="lg">
             Прийти в шоурум
           </ButtonLink>
         </div>
