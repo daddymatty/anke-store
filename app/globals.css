@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+/*
+ * Дизайн-токени ANKE — джерело правди: docs/brand.md
+ * Кольори, типографіка, радіуси, тіні. Базис spacing — 4px (дефолт Tailwind).
+ */
+@theme {
+  /* Палітра */
+  --color-ink: #141414;
+  --color-paper: #ffffff;
+  --color-beige: #f2ece4;
+  --color-beige-deep: #e7dcce;
+  --color-rose: #d48ca8;
+  --color-rose-deep: #b76e8c;
+  --color-rose-soft: #efd7e0;
+  --color-muted: #6b6459;
+  --color-line: #e5e0d8;
+
+  /* Шрифти (змінні виставляє next/font у layout) */
+  --font-sans: var(--font-montserrat), system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-cormorant), Georgia, serif;
+
+  /* Дисплейні розміри поверх стандартної шкали */
+  --text-display-sm: 2rem;
+  --text-display-sm--line-height: 1.15;
+  --text-display: 2.5rem;
+  --text-display--line-height: 1.1;
+  --text-display-lg: 3.25rem;
+  --text-display-lg--line-height: 1.06;
+  --text-display-xl: 4.25rem;
+  --text-display-xl--line-height: 1.02;
+
+  /* Радіуси */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Тіні */
+  --shadow-soft: 0 8px 30px rgb(20 20 20 / 6%);
+  --shadow-card: 0 2px 12px rgb(20 20 20 / 5%);
+  --shadow-drawer: -12px 0 40px rgb(20 20 20 / 12%);
+}
+
+/* Z-index шкала — єдине місце, де призначаються шари */
+:root {
+  --z-header: 40;
+  --z-megamenu: 45;
+  --z-drawer: 50;
+  --z-modal: 60;
+  --z-toast: 70;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-rose-soft);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-rose-deep);
+  outline-offset: 2px;
+}
+
+/* Shimmer для скелетонів: анімується лише transform */
+.anke-shimmer {
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 55%), transparent);
+  animation: anke-shimmer 1.4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes anke-shimmer {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anke-shimmer {
+    animation: none;
+  }
+}
