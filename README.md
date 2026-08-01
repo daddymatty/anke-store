@@ -69,7 +69,36 @@ npm run check:seo # кожна сторінка: title/description/canonical/JSO
 npm run build && npm run lint && npm run typecheck
 ```
 
+## Демо-вітрина на GitHub Pages
+
+Кожен пуш у `main` публікує статичний знімок вітрини:
+**https://daddymatty.github.io/anke-store/**
+
+Як це працює: CI піднімає справжній сервер і краулером (`tools/snapshot.mjs`) зберігає
+готовий HTML усіх сторінок. Статичний `next export` тут не підходить — сторфронт
+використовує Server Actions.
+
+Що працює у знімку: головна, категорії з фільтрами (візуально), картки товарів,
+блог, lookbook, контент і юридичні сторінки, вішліст/кабінет у порожньому стані.
+Що не працює: кошик, checkout, пошук, API — вони потребують сервера.
+
+Разові кроки для увімкнення:
+1. Репозиторій має бути **публічним** (Pages для приватних — платна функція GitHub Pro).
+2. Settings → Pages → Source: **GitHub Actions**.
+
+Локальна перевірка знімка:
+```bash
+SNAPSHOT=1 NEXT_PUBLIC_BASE_PATH=/anke-store npm run build
+SNAPSHOT=1 NEXT_PUBLIC_BASE_PATH=/anke-store npm run start &
+NEXT_PUBLIC_BASE_PATH=/anke-store node tools/snapshot.mjs
+npx serve _site   # → http://localhost:3000/anke-store/
+```
+
 ## Деплой
+
+**Vercel Hobby — безкоштовно і з повним функціоналом** (кошик, checkout, кабінет):
+імпорт репозиторію на vercel.com, змінні з `.env.example`, деплой автоматичний.
+Для комерційного використання потрібен план Pro.
 
 **Vercel (фронт) + VPS (Medusa)** — рекомендовано:
 - Vercel: імпорт репозиторію, змінні з `.env.example`, домен → `NEXT_PUBLIC_SITE_URL`.
