@@ -10,6 +10,7 @@ const CartDrawer = dynamic(() => import("@/components/shop/CartDrawer").then((m)
 const SearchOverlayLazy = dynamic(() => import("./SearchOverlay").then((m) => m.SearchOverlay), { ssr: false });
 const MobileMenuLazy = dynamic(() => import("./MobileMenu").then((m) => m.MobileMenu), { ssr: false });
 import { Logo } from "@/components/ui/Logo";
+import { Portal } from "@/components/ui/Portal";
 import { IconBag, IconHeart, IconMenu, IconSearch, IconUser } from "@/components/ui/icons";
 import {
   cartCount,
@@ -59,26 +60,30 @@ export function Header({ nav }: { nav: NavEntry[] }) {
 
   return (
     <header
-      className={`sticky top-0 bg-paper/95 backdrop-blur-sm transition-[box-shadow] duration-200 ${
+      // Без backdrop-filter: він створює containing block, і всі fixed-оверлеї
+      // (меню, пошук, кошик) обрізаються до висоти хедера.
+      className={`sticky top-0 bg-paper transition-[box-shadow] duration-200 ${
         scrolled ? "shadow-[0_1px_0_var(--color-line)]" : ""
       }`}
       style={{ zIndex: "var(--z-header)" }}
       onMouseLeave={() => setMegaFor(null)}
     >
       <div className="relative mx-auto flex w-full max-w-[1440px] items-center px-4 md:px-8 xl:px-12">
-        {/* Мобільний бургер */}
-        <button
-          type="button"
-          className="-ml-2 p-2 lg:hidden"
-          aria-label="Відкрити меню"
-          aria-expanded={menuOpen}
-          onClick={() => {
-            setEverMenu(true);
-            setMenuOpen(true);
-          }}
-        >
-          <IconMenu className="h-6 w-6" />
-        </button>
+        {/* Мобільний бургер. flex-1 з обох боків — щоб лого стояло по центру екрана */}
+        <div className="flex flex-1 items-center lg:hidden">
+          <button
+            type="button"
+            className="-ml-2 p-2"
+            aria-label="Відкрити меню"
+            aria-expanded={menuOpen}
+            onClick={() => {
+              setEverMenu(true);
+              setMenuOpen(true);
+            }}
+          >
+            <IconMenu className="h-6 w-6" />
+          </button>
+        </div>
 
         {/* Лого: full на desktop, solo на мобільному */}
         <Link
@@ -119,7 +124,7 @@ export function Header({ nav }: { nav: NavEntry[] }) {
         </nav>
 
         {/* Дії */}
-        <div className="flex items-center justify-end gap-1 md:gap-2">
+        <div className="flex flex-1 items-center justify-end gap-1 md:gap-2 lg:flex-none">
           <button
             type="button"
             className="p-2"
@@ -174,15 +179,18 @@ export function Header({ nav }: { nav: NavEntry[] }) {
         />
       </div>
 
-      {everMenu && <MobileMenuLazy open={menuOpen} onClose={() => setMenuOpen(false)} nav={nav} />}
-      {everSearch && <SearchOverlayLazy open={searchOpen} onClose={() => setSearchOpen(false)} />}
-      {everCart && (
-        <CartDrawer
-          open={cartOpen}
-          onClose={() => setCartOpen(false)}
-          freeShippingFrom={SITE.freeShippingFrom * 100}
-        />
-      )}
+      {/* Оверлеї — у <body>: усередині хедера вони лишалися б у його stacking context */}
+      <Portal>
+        {everMenu && <MobileMenuLazy open={menuOpen} onClose={() => setMenuOpen(false)} nav={nav} />}
+        {everSearch && <SearchOverlayLazy open={searchOpen} onClose={() => setSearchOpen(false)} />}
+        {everCart && (
+          <CartDrawer
+            open={cartOpen}
+            onClose={() => setCartOpen(false)}
+            freeShippingFrom={SITE.freeShippingFrom * 100}
+          />
+        )}
+      </Portal>
     </header>
   );
 }

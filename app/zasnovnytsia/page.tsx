@@ -13,7 +13,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `${FOUNDER.fullName} — засновниця ANKE`,
-  description: `${FOUNDER.fullName} — засновниця українського бренду ANKE: як з'явився бренд, за якими правилами обираються тканини і чому кожна модель спершу перевіряється на собі.`,
+  description: `${FOUNDER.fullName} — засновниця ANKE: як з'явився шоурум, за якими правилами відбираються речі і чому кожна модель спершу перевіряється на собі.`,
   alternates: pageAlternates("/zasnovnytsia"),
   ...(FOUNDER.ogImage
     ? { openGraph: { images: [{ url: FOUNDER.ogImage, width: 1200, height: 630 }] } }
@@ -158,7 +158,7 @@ export default function FounderPage() {
       <section aria-labelledby="founder-principles" className="mt-16 bg-beige py-16 md:mt-24 md:py-20">
         <Container>
           <h2 id="founder-principles" className="font-display text-display-sm font-light">
-            Правила, за якими шиємо
+            Правила, за якими обираємо
           </h2>
           <ul className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
             {FOUNDER.principles.map((p, i) => (

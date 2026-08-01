@@ -37,7 +37,7 @@ export default async function Home() {
             className="mt-4 max-w-2xl font-display text-display-sm font-light md:text-display-lg"
           />
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
-            Сукні, костюми і трикотаж українського виробництва. Доставка Новою Поштою
+            Сукні, костюми і трикотаж — відібрані вручну. Доставка Новою Поштою
             1–3 дні, примірка у шоурумі в Києві.
           </p>
           <div className="mt-8 flex gap-3">

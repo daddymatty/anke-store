@@ -14,7 +14,7 @@
  *   node tools/snapshot.mjs
  * Env: SNAPSHOT_ORIGIN (default http://127.0.0.1:3000), NEXT_PUBLIC_BASE_PATH, OUT_DIR
  */
-import { cp, mkdir, writeFile } from "node:fs/promises";
+import { cp, mkdir, readdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const ORIGIN = process.env.SNAPSHOT_ORIGIN ?? "http://127.0.0.1:3000";
@@ -33,15 +33,28 @@ async function get(routePath) {
 }
 
 /**
+ * Теки в public/ — усе, на що можуть посилатися картинки (`/demo/…`, `/founder/…`).
+ * Читаємо з диска, щоб нова тека не «загубилась» на Pages мовчки.
+ */
+const publicDirs = (await readdir("public", { withFileTypes: true }))
+  .filter((e) => e.isDirectory())
+  .map((e) => e.name);
+
+/**
  * next/image у режимі unoptimized віддає src як є (`/demo/...`) — без basePath.
- * На Pages такий шлях веде на корінь домену, де нічого немає. Тому дописуємо basePath.
+ * На Pages такий шлях веде на корінь домену, де нічого немає. Тому дописуємо basePath
+ * до кожного посилання на теку з public/ — у src, srcset, url() і preload-хедерах.
  */
 function fixAssetPaths(html) {
   if (!BASE_PATH) return html;
-  return html
-    .replaceAll('"/demo/', `"${BASE_PATH}/demo/`)
-    .replaceAll("(/demo/", `(${BASE_PATH}/demo/`)
-    .replaceAll(" /demo/", ` ${BASE_PATH}/demo/`);
+  let out = html;
+  for (const dir of publicDirs) {
+    out = out
+      .replaceAll(`"/${dir}/`, `"${BASE_PATH}/${dir}/`)
+      .replaceAll(`(/${dir}/`, `(${BASE_PATH}/${dir}/`)
+      .replaceAll(` /${dir}/`, ` ${BASE_PATH}/${dir}/`);
+  }
+  return out;
 }
 
 /** Стартовий набір: sitemap-и + службові сторінки без sitemap */

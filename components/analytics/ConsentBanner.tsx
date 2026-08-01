@@ -68,7 +68,7 @@ export function ConsentBanner() {
       role="dialog"
       aria-label="Налаштування cookie"
       className="fixed inset-x-3 bottom-3 mx-auto max-w-xl border border-line bg-paper p-5 shadow-soft md:inset-x-auto md:right-6 md:bottom-6"
-      style={{ zIndex: "var(--z-toast)" }}
+      style={{ zIndex: "var(--z-consent)" }}
     >
       <p className="text-[13px] leading-relaxed text-muted">
         Ми використовуємо cookie для роботи сайту, аналітики і персоналізованої реклами.
