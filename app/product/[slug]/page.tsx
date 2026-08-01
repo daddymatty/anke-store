@@ -10,8 +10,11 @@ import { RecentlyViewed } from "@/components/shop/RecentlyViewed";
 import { ReviewsSection, Stars } from "@/components/shop/ReviewsSection";
 import { VariantPicker } from "@/components/shop/VariantPicker";
 import { ViewedTracker } from "@/components/shop/ViewedTracker";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { catalog } from "@/lib/catalog";
 import { discountPercent, formatPrice, priceDecimal } from "@/lib/money";
+import { breadcrumbsJsonLd, productJsonLd } from "@/lib/seo/jsonld";
+import { pageAlternates } from "@/lib/seo/meta";
 import { SITE } from "@/lib/site";
 
 /** Картка товару. ISR 300с; JSON-LD Product+Offer додає Етап 8. */
@@ -33,6 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${product.title} — купити в Києві та Україні`,
     description: `${product.title} за ${priceDecimal(product.price)} грн. ${product.materialFull}. Доставка Новою Поштою 1–3 дні, обмін і повернення 14 днів | ${SITE.name}`,
+    alternates: pageAlternates(`/product/${product.slug}`),
     openGraph: {
       images: product.images[0] ? [{ url: product.images[0].url, alt: product.images[0].alt }] : undefined,
     },
@@ -60,6 +64,7 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <Container className="py-6 pb-24 md:py-10 lg:pb-10">
+      <JsonLd data={[productJsonLd(product), breadcrumbsJsonLd(crumbs)]} />
       <ViewedTracker
         item={{
           slug: product.slug,

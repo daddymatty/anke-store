@@ -3,6 +3,8 @@ import { catalog } from "@/lib/catalog";
 import type { CatalogFilters, CategoryNode } from "@/lib/catalog/types";
 import { PER_PAGE, parseCatalogParams, type CatalogSearchParams } from "@/lib/catalog/url";
 import { Container } from "@/components/ui/Container";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbsJsonLd, itemListJsonLd } from "@/lib/seo/jsonld";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { FiltersPanel } from "./FiltersPanel";
 import { Pagination } from "./Pagination";
@@ -20,6 +22,8 @@ type Props = {
   forcedFilters?: Partial<CatalogFilters>;
   subcategories?: CategoryNode[];
   searchParams: CatalogSearchParams;
+  /** Категорія для JSON-LD ItemList (сторінки категорій) */
+  jsonLdCategory?: CategoryNode;
 };
 
 /** Спільний лістинг для категорій, /novynky і /sale. */
@@ -33,6 +37,7 @@ export async function CatalogView({
   forcedFilters,
   subcategories,
   searchParams,
+  jsonLdCategory,
 }: Props) {
   const state = parseCatalogParams(searchParams);
   const merged = { ...state.filters, ...forcedFilters };
@@ -48,6 +53,8 @@ export async function CatalogView({
 
   return (
     <Container className="py-6 md:py-10">
+      <JsonLd data={breadcrumbsJsonLd(breadcrumbs)} />
+      {jsonLdCategory && <JsonLd data={itemListJsonLd(jsonLdCategory, result.items)} />}
       <Breadcrumbs items={breadcrumbs} />
 
       <header className="mt-5">

@@ -4,6 +4,7 @@ import { CatalogView } from "@/components/shop/CatalogView";
 import { catalog } from "@/lib/catalog";
 import type { CategoryNode } from "@/lib/catalog/types";
 import type { CatalogSearchParams } from "@/lib/catalog/url";
+import { catalogRobotsAndCanonical } from "@/lib/seo/meta";
 import { SITE } from "@/lib/site";
 
 /** Сторінка категорії: /odyah, /odyah/sukni, /odyah/sukni/midi */
@@ -29,14 +30,16 @@ export async function generateStaticParams() {
   return paths;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { categoryPath } = await params;
+  const sp = await searchParams;
   const category = await catalog.getCategoryByPath(categoryPath);
   if (!category) return {};
-  // Повні SEO-шаблони (canonical, hreflang, правила фасетів) — Етап 8
   return {
     title: `${category.title} — купити в Києві та Україні`,
-    description: category.description ?? `${category.title} від ${SITE.name}: доставка Новою Поштою по Україні.`,
+    description:
+      category.description ?? `${category.title} від ${SITE.name}: доставка Новою Поштою по Україні.`,
+    ...catalogRobotsAndCanonical(`/${categoryPath.join("/")}`, sp),
   };
 }
 
@@ -63,6 +66,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       categoryPath={categoryPath}
       subcategories={category.children}
       searchParams={sp}
+      jsonLdCategory={category}
     />
   );
 }

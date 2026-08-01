@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ProductCard } from "@/components/shop/ProductCard";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { catalog } from "@/lib/catalog";
+import { localBusinessJsonLd } from "@/lib/seo/jsonld";
+import { pageAlternates } from "@/lib/seo/meta";
 import { NAV } from "@/lib/site";
+
+export const metadata: Metadata = {
+  alternates: pageAlternates(""),
+};
 
 /**
  * Головна — каркасна версія Етапу 2.
@@ -14,6 +22,7 @@ export default async function Home() {
   const newArrivals = await catalog.getNewArrivals(8);
   return (
     <>
+      <JsonLd data={localBusinessJsonLd()} />
       {/* Hero */}
       <section className="bg-beige">
         <Container className="flex min-h-[62vh] flex-col items-start justify-center py-20">
