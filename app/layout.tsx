@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { Providers } from "@/components/providers";
+import { catalog } from "@/lib/catalog";
 import { cormorant, montserrat } from "@/lib/fonts";
+import { buildNav } from "@/lib/nav";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -29,16 +31,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const nav = buildNav(await catalog.getCategoryTree());
   return (
     <html lang="uk" className={`${cormorant.variable} ${montserrat.variable} h-full`}>
       <body className="flex min-h-full flex-col">
         <Providers>
-          <Header />
+          <Header nav={nav} />
           <main className="flex-1">{children}</main>
           <Footer />
         </Providers>

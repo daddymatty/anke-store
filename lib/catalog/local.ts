@@ -34,6 +34,7 @@ export function applyFilters(items: Product[], f?: CatalogFilters): Product[] {
     if (f.priceMax != null && p.price > f.priceMax * 100) return false;
     if (f.inStockOnly && !p.inStock) return false;
     if (f.onSaleOnly && !p.compareAtPrice) return false;
+    if (f.newOnly && !p.isNew) return false;
     return true;
   });
 }

@@ -98,6 +98,7 @@ export type CatalogFilters = {
   materials?: string[];
   inStockOnly?: boolean;
   onSaleOnly?: boolean;
+  newOnly?: boolean;
 };
 
 export type FacetValue = { value: string; count: number; hex?: string };
